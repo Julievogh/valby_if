@@ -1,19 +1,26 @@
 ---
-
+import Navbar from "../components/Navbar.astro";
+const { title } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta name="generator" content={Astro.generator} />
+
     <title>Valby IF</title>
-    <link rel="stylesheet" href="./public/css/generel.css" />
+    <link rel="stylesheet" href="./src/css/generel.css" />
+    <link rel="stylesheet" href="/src/css/index.css" />
   </head>
   <body>
-    <h1>Valby IF</h1>
-    <h2>Hej test</h2>
-    <p>En masse kloge ord</p>
+    <header><Navbar /></header>
+
+    <main></main>
+
+    <footer></footer>
   </body>
 </html>
