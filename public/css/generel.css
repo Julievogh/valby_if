@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "PoetsenOne";
+  src: url("/public/fonts/PoetsenOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Almarai_reg";
+  src: url("/public/fonts/Almarai-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Almarai_bold";
+  src: url("/public/fonts/Almarai-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Light */
+@font-face {
+  font-family: "Almarai_light";
+  src: url("/public/fonts/Almarai-Light.ttf") format("truetype");
+  font-weight: lighter; /* Adjust as needed based on your font files */
+  font-style: normal;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: "Almarai_extra_bold";
+  src: url("/public/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  font-weight: bolder; /* Adjust as needed based on your font files */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AlfaSlabOne";
+  src: url("/public/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  font-weight: normal; /* Adjust as needed based on your font files */
+  font-style: normal;
+}
+
+body {
+  color: black;
+}
+
+h1 {
+  font-family: "PoetsenOne", sans-serif;
+  font-size: 50px;
+  color: #0E1D52;
+}
+
+h2 {
+  font-family: "PoetsenOne", sans-serif;
+  font-size: 35px;
+  color: #395D94;
+}
+
+p {
+  font-family: "Almarai_reg", sans-serif;
+  font-size: 25px;
+  color: #0E1D52;
+}
+
+.husknusaeson {
+  font-family: "AlfaSlabOne", sans-serif;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
