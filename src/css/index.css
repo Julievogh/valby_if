@@ -1,0 +1,163 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.farvelinje1 img {
+  margin: 30px 30px 30px 0;
+
+  max-width: 70%;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nyheder {
+  margin: 40px;
+}
+
+.nyheder_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin: 80px;
+}
+
+.nyheder_box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  margin: 10px;
+  max-width: 100%;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info_container h2 {
+  margin-bottom: 26px;
+}
+
+.infovideo {
+  position: relative;
+  padding: 0;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.infovideo video {
+  padding: 0 100px;
+}
+
+.triangle_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
+}
+
+.familien_container a,
+h5,
+p {
+  margin: 80px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.familien_billeder {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.familien_billeder img:nth-child(2) {
+  width: 100%;
+  padding: 0 200px;
+  z-index: 1;
+}
+.triangle_background2 {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 900px) {
+  .back-video {
+    width: auto;
+    height: 50%;
+  }
+
+  .nyheder_container {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .nyheder_box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .farvelinje1 img {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .info_container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .familien_billeder img:nth-child(2) {
+    padding: 0 40px;
+  }
+
+  .familien_container a,
+  h5,
+  p {
+    margin: 30px;
+  }
+}

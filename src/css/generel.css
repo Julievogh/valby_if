@@ -31,7 +31,7 @@
 @font-face {
   font-family: "Almarai_light";
   src: url("/public/fonts/Almarai-Light.ttf") format("truetype");
-  font-weight: lighter; 
+  font-weight: lighter;
   font-style: normal;
 }
 
@@ -39,44 +39,51 @@
 @font-face {
   font-family: "Almarai_extra_bold";
   src: url("/public/fonts/Almarai-ExtraBold.ttf") format("truetype");
-  font-weight: bolder; 
+  font-weight: bolder;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AlfaSlabOne";
   src: url("/public/fonts/Almarai-ExtraBold.ttf") format("truetype");
-  font-weight: normal; 
+  font-weight: normal;
   font-style: normal;
 }
 
-
-
 body {
-  
   color: black;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
-
-
-
 
 h1 {
   font-family: "PoetsenOne", sans-serif;
   font-size: 50px;
-  color: #0E1D52;
+  color: #0e1d52;
 }
 
 h2 {
   font-family: "PoetsenOne", sans-serif;
   font-size: 35px;
-  color: #395D94;
+  color: #0e1d52;
+}
+
+h3 {
+  font-family: "PoetsenOne", sans-serif;
+  font-size: 28px;
+  color: #395d94;
+  font-weight: 400;
+}
+
+h5 {
+  font-family: "Almarai_reg", sans-serif;
+  font-size: 20px;
+  color: #0e1d52;
 }
 
 p {
   font-family: "Almarai_reg", sans-serif;
   font-size: 25px;
-  color: #0E1D52;
+  color: #0e1d52;
 }
 
 .husknusaeson {
@@ -84,4 +91,3 @@ p {
   font-size: 25px;
   color: rgb(255, 255, 255);
 }
-

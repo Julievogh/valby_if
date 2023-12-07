@@ -1,20 +1,26 @@
-
-
 <header>
   <div class="navbar">
     <ul class="menu">
       <li class="menu-item"><a href="./index.astro">VELKOMMEN</a></li>
       <li class="menu-item"><a href="./nyheder.astro">NYHEDER</a></li>
       <li class="menu-item"><a href="./nyheder.astro">EVENTS</a></li>
-      <li class="menu-item"><a href="./hold.astro">HOLD</a></li>
-      <li class="menu-item"><a href="./kalender.astro">KALENDER</a></li>
     </ul>
-    <img src="./public/imgs/valbyif_logo.svg" alt="Logo" class="logo" />
+    <a href="./index.astro"
+      ><img src="./public/imgs/valbyif_logo.svg" alt="Logo" class="logo" /></a
+    >
     <ul class="menu">
-      <li class="menu-item"><a href="./traenere.astro">TRÆNERE</a></li>
-      <li class="menu-item"><a href="./bestyrelsen.astro">BESTYRELSEN</a></li>
-      <li class="menu-item"><a href="./galleri.astro">GALLERI</a></li>
-      <li class="menu-item"><a href="./omos.astro">OM OS</a></li>
+      <li class="menu-item menu-item-omos">
+        <a href="./omos.astro">OM OS</a>
+        <ul class="dropdown">
+          <li class="menu-item"><a href="./traenere.astro">TRÆNERE</a></li>
+          <li class="menu-item">
+            <a href="./bestyrelsen.astro">BESTYRELSEN</a>
+          </li>
+          <li class="menu-item"><a href="./kalender.astro">KALENDER</a></li>
+          <li class="menu-item"><a href="./galleri.astro">GALLERI</a></li>
+        </ul>
+      </li>
+      <li class="menu-item"><a href="./hold.astro">HOLD</a></li>
       <li class="menu-item">
         <a href="./tilmelding.astro"><span>TILMELD</span></a>
       </li>
@@ -36,173 +42,218 @@
       <li class="menu-item"><a href="./hold.astro">HOLD</a></li>
       <li class="menu-item"><a href="./kalender.astro">KALENDER</a></li>
 
-      <li class="menu-item"><a href="./traenere.astro">TRÆNERE</a></li>
-      <li class="menu-item"><a href="./bestyrelsen.astro">BESTYRELSEN</a></li>
-      <li class="menu-item"><a href="./galleri.astro">GALLERI</a></li>
-      <li class="menu-item"><a href="./omos.astro">OM OS</a></li>
+      <li class="menu-item">
+        <a href="./omos.astro">OM OS</a>
+        <ul class="dropdown">
+          <li class="menu-item"><a href="./traenere.astro">TRÆNERE</a></li>
+          <li class="menu-item">
+            <a href="./bestyrelsen.astro">BESTYRELSEN</a>
+          </li>
+          <li class="menu-item"><a href="./galleri.astro">GALLERI</a></li>
+        </ul>
+      </li>
+
       <li class="menu-item">
         <a href="./tilmelding.astro"><span>TILMELD</span></a>
       </li>
     </ul>
-</div>
+  </div>
 </header>
-
-
-
 
 <style>
   .navbar {
-  position: fixed;
-  top: 50px;
-  left: 30px;
-  right: 30px;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  border-radius: 10px;
-}
-
-
-
-.logo-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.logo {
-  max-width: 250px;
-  display: block;
-  margin-top: 0px;
-  margin-bottom: -45px;
-}
-
-.menu {
-  display: flex;
-  margin: 20px;
-  margin-right: 25px;
-}
-
-
-.menu-item {
-  margin: 0 10px;
-}
-
-
-
-.navbar2 {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-
-  .navbar {
-    display: none;
-  }
-
-  .navbar2 {
     position: fixed;
     top: 50px;
     left: 30px;
     right: 30px;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 60px;
+    border-radius: 10px;
   }
 
-  .menu-toggle {
-    cursor: pointer;
-    margin-right: 15px;
+  .logo-container {
+    flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 25px;
+    justify-content: center;
   }
 
-  .menu-toggle span {
-    background-color: #333;
-    height: 3px;
-    width: 30px;
+  .logo {
+    max-width: 250px;
     display: block;
-  }
-  .show {
-    display: block;
+    margin-top: 0px;
+    margin-bottom: -45px;
   }
 
-  .menu2 {
+  .menu {
+    display: flex;
+    margin: 20px;
+    margin-right: 25px;
+  }
+
+  .menu-item {
+    margin: 0 10px;
+  }
+
+  .navbar2 {
     display: none;
   }
 
-  .menu2.show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 65px;
-    right: 0;
-    width: 200px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: auto;
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+
+    .navbar {
+      display: none;
+    }
+
+    .navbar2 {
+      position: fixed;
+      top: 50px;
+      left: 30px;
+      right: 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .menu-toggle {
+      cursor: pointer;
+      margin-right: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 25px;
+    }
+
+    .menu-toggle span {
+      background-color: #333;
+      height: 3px;
+      width: 30px;
+      display: block;
+    }
+    .show {
+      display: block;
+    }
+
+    .menu2 {
+      display: none;
+    }
+
+    .menu2.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 65px;
+      right: 0;
+      width: 200px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      justify-content: flex-end;
+      align-items: flex-end;
+      height: auto;
+    }
   }
-}
 
+  .navbar,
+  .navbar2 {
+    font-family: "Almarai_reg", sans-serif;
+    font-size: 16px;
+    color: #0e1d52;
+  }
 
-  .navbar, .navbar2 {
-  font-family: "Almarai_reg", sans-serif;
-  font-size: 16px;
-  color: #0E1D52;
-}
+  a {
+    color: #0e1d52;
+    text-decoration: none;
+  }
 
-main {
- 
-}
+  a span {
+    font-weight: 800;
+  }
 
-a {
-  color: #0E1D52;
-  text-decoration: none;
-  
-}
+  ul {
+    list-style-type: none;
+  }
 
-a span {
-  font-weight: 800;
-}
+  ul li {
+    display: inline-block;
+    position: relative;
+  }
 
-li {
-  list-style-type: none;
-}
+  ul li a {
+    display: block;
+    padding: 20px 25px;
+    text-decoration: none;
+    text-align: center;
+  }
 
-a:hover {
- transition: 0.3s;
-    color: #FD7D20;
-}
+  ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 200px;
+  }
 
+  ul li ul.dropdown li {
+    display: block;
+  }
+
+  a:hover {
+    transition: 0.3s;
+    color: #fd7d20;
+  }
 </style>
-
-
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    const mainHeader = document.getElementById("mainHeader");
+    const navbar = document.querySelector(".navbar");
+    const navbar2 = document.querySelector(".navbar2");
+
+    window.addEventListener("scroll", function () {
+    
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+     
+      if (scrollPosition > navbar.offsetHeight) {
+        navbar2.classList.add("fixed-navbar2");
+      } else {
+        navbar2.classList.remove("fixed-navbar2");
+      }
+    });
+
+    const omOsMenuItem = document.querySelector(".menu-item-omos");
+    const dropdown = document.querySelector(".dropdown");
+
+    if (omOsMenuItem && dropdown) {
+      omOsMenuItem.addEventListener("mouseover", function () {
+        dropdown.style.display = "block";
+      });
+
+      omOsMenuItem.addEventListener("mouseout", function () {
+        dropdown.style.display = "none";
+      });
+    }
+
     const mobileMenuToggle = document.getElementById("mobile-menu");
     const menu2 = document.querySelector(".menu2");
 
-    mobileMenuToggle.addEventListener("click", function () {
-      menu2.classList.toggle("show");
-    });
-
-    console.log("hello");
+    if (mobileMenuToggle && menu2) {
+      mobileMenuToggle.addEventListener("click", function () {
+        menu2.classList.toggle("show");
+      });
+    }
   });
 </script>
+
