@@ -1,0 +1,68 @@
+<section class="familien">
+  <div class="familien_container">
+    <h5>Valby IF - Familien</h5>
+    <p>
+      Alle undervisere og ansatte i Valby IF er superdedikerede. Og vi går
+      faktisk ret meget op i, at du kommer til at rykke dig helt vildt – både
+      personligt og fysisk. Nogen er vilde med at danse, andre er nogle rigtig
+      akrobater, andre kan godt lide at danse.
+    </p>
+    <a href="/traenere.astro">Mød os alle her</a>
+    <div class="familien_billeder">
+      <img
+        class="triangle_background2"
+        src="../public/imgs/orangetrekant.svg"
+        alt=""
+      />
+      <img src="../public/imgs/familientest.png" alt="" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .familien_container a,
+  h5,
+  p {
+    margin: 80px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .familien_billeder {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .familien_billeder img:nth-child(2) {
+    width: 100%;
+    padding: 0 200px;
+    z-index: 1;
+  }
+  .triangle_background2 {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .familien_billeder img:nth-child(2) {
+      padding: 0 40px;
+    }
+
+    .familien_container a,
+    h5,
+    p {
+      margin: 30px;
+    }
+  }
+</style>

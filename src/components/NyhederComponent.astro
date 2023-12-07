@@ -1,0 +1,64 @@
+<section class="nyheder">
+  <h2>Nyheder</h2>
+  <div class="nyheder_container">
+    <div class="nyheder_box">
+      <img src="../public/imgs/nyhed1.png" alt="" />
+      <h5>Information vedrørende tilmeldinger</h5>
+      <a href="">Læs mere</a>
+    </div>
+    <div class="nyheder_box">
+      <img src="../public/imgs/nyhed2.png" alt="" />
+      <h5>Information vedrørende tilmeldinger</h5>
+      <a href="">Læs mere</a>
+    </div>
+    <div class="nyheder_box">
+      <img src="../public/imgs/nyhed3.png" alt="" />
+      <h5>Information vedrørende tilmeldinger</h5>
+      <a href="">Læs mere</a>
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+.nyheder {
+  margin: 40px;
+}
+
+.nyheder_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin: 80px;
+}
+
+.nyheder_box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  margin: 10px;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+
+
+  .nyheder_container {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .nyheder_box {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+</style>
