@@ -1,8 +1,13 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import ColorBar from "../components/ColorBar.astro";
 import Familien from "../components/Familien.astro";
 import Nyheder from "../components/NyhederComponent.astro";
 import InfoContainer from "../components/InfoContainer.astro";
+import FoelgMed from "../components/FoelgMed.astro";
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import ColorBar2 from "../components/ColorBar2.astro";
+import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
 ---
 
@@ -29,8 +34,13 @@ const { title } = Astro.props;
       <header><Navbar /></header>
     </div>
     <main>
-      <div class="farvelinje1">
-        <img src="../public/imgs/farvelinje.svg" alt="" />
+
+
+
+
+     <div class="farvelinje1"> 
+      <ColorBar />
+       <!--  <img src="../public/imgs/farvelinje.svg" alt="" />-->
       </div>
       <div class="welcome">
         <h1>Velkommen til Valby IF</h1>
@@ -42,7 +52,14 @@ const { title } = Astro.props;
       <InfoContainer />
 
       <Familien />
+
+      <FoelgMed />
+
+      <Nyhedsbrev />
+      <ColorBar2 />
     </main>
-    <footer></footer>
+    <footer>
+      <Footer />
+    </footer>
   </body>
 </html>

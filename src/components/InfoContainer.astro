@@ -18,43 +18,51 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
+
   .info_container h2 {
     margin-bottom: 26px;
+    margin: 40px;
   }
 
   .infovideo_container {
-
-  }
-
-  .triangle_background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-repeat: repeat-x;
-  background-size: cover;
-  background-position: center;
-}
-
-  .infovideo {
     position: relative;
-    padding: 0;
-    top: 0;
-    left: 0;
-    max-width: 80vh;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
     height: auto;
   }
 
-  .infovideo video {
-    padding: 0 100px;
+  .triangle_background {
+   position: absolute;
+    justify-self: center;
+    align-self: center;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; 
   }
+
+  .infovideo {
+     width: 100%;
+    padding: 0 200px;
+    z-index: 1;
+  }
+
   @media only screen and (max-width: 900px) {
     .info_container {
       margin: 0;
       padding: 0;
+    }
+
+    .triangle_background {
+   
+    top: 10px;
+    }
+    .infovideo {
+      padding: 0 40px;
     }
   }
 </style>

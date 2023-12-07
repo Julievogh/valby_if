@@ -1,0 +1,140 @@
+<div class="logo-holder outer">
+  <div class="bg"></div>
+  <div class="bar top fill1"></div>
+  <div class="bar below2 fill2"></div>
+  <div class="bar below3 fill3"></div>
+  <div class="bar below1 fill4"></div>
+</div>
+
+
+
+<style>
+
+
+
+.outer {
+  display: grid;
+  grid-template-columns: 1fr; 
+  place-items: end; 
+  justify-items: start; 
+  width: 100%;
+}
+
+
+.logo-holder {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 0 auto; /* Center the logo-holder horizontally */
+  padding-top: 12px;
+  padding-bottom: 24px;
+  -webkit-transform: translateZ(0);
+}
+
+
+.outer > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+.outer .below1 {
+  z-index: 1;
+  
+}
+.outer .below2 {
+  z-index: 3;
+  
+}
+.outer .below3 {
+  z-index: 2;
+  
+}
+.outer .top {
+  z-index: 4;
+ 
+}
+
+
+
+.bg {
+
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  center 0px no-repeat ;
+    background-size: contain;
+    -webkit-filter: drop-shadow(0px 6px 25px rgba(0,0,0,0.5));
+}
+
+.bar {
+    position: relative;
+    height: 24px;
+    background: #6a6a6a;
+    width:  auto;
+    top: 0px;
+    left: 0px;
+    margin-top: 8px;
+    box-shadow: 0 0 3px rgba(192,192,192,0.9);
+    animation: fill 5s infinite alternate, colors 5s infinite alternate;
+}
+
+
+
+.bar.fill1 {
+  animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
+  background-color: #395D94;
+}
+
+.bar.fill2 {
+   animation:  fill-2 5s infinite alternate, colors 5s infinite alternate;
+   background-color: #6AA0DF;
+}
+
+
+.bar.fill3 {
+   animation:  fill-3 5s infinite alternate, colors 5s infinite alternate;
+    background-color: #BED5F1;
+}
+
+
+.bar.fill4 {
+   animation:  fill-4 5s infinite alternate, colors 5s infinite alternate;
+   background-color: #FD7D20;
+}
+
+
+
+
+@keyframes fill-1 {
+  0%   { width: 330px; }
+  33%  { width: 280px;}
+  66%  { width: 150px;}
+  100% { width: 120px; }
+}
+
+@keyframes fill-2 {
+  0%   { width: 426px; }
+  33%  { width: 320px;}
+  66%  { width: 270px;}
+  100% { width: 240px; }
+}
+
+@keyframes fill-3 {
+  0%   { width: 489px; }
+  33%  { width: 374px;}
+  66%  { width: 300px;}
+  100% { width: 260px; }
+}
+
+@keyframes fill-4 {
+  0%   { width: 599px; }
+  33%  { width: 434px;}
+  66%  { width: 398px;}
+  100% { width: 380px; }
+}
+
+
+
+
+</style>
