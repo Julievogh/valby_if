@@ -6,6 +6,7 @@
       <h5>Information vedrørende tilmeldinger</h5>
       <a href="">Læs mere</a>
     </div>
+    <div class="nyheder_2_box">
     <div class="nyheder_box">
       <img src="../public/imgs/nyhed2.png" alt="" />
       <h5>Information vedrørende tilmeldinger</h5>
@@ -17,35 +18,57 @@
       <a href="">Læs mere</a>
     </div>
   </div>
+  </div>
   <div class="flere_nyheder">
+    
     <h5>Tidligere nyheder</h5>
     <a href="nyheder.astro">Klik her</a>
+    <div class="line"></div>
   </div>
 </section>
-
 <style>
   .nyheder {
     margin: 40px;
   }
 
+  .nyheder h2 {
+    margin-left: 110px;
+  margin-bottom: -60px;
+  }
+
   .nyheder_container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    margin: 80px;
+    margin: 100px;
   }
 
   .nyheder_box {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 14px;
-    margin: 10px;
+    margin: 0 10px;
     max-width: 100%;
+    flex: 1; 
+    .nyheder_box:first-child {
+  order: -1;
+}
+
+  }
+
+  
+
+  .nyheder_box img {
+    max-width: 100%; 
+  }
+
+  .nyheder_2_box {
+    display: flex;
+    flex-direction: column;
+    width: 30.5%;
   }
 
   .flere_nyheder {
@@ -55,23 +78,53 @@
     align-items: center;
   }
 
+  .flere_nyheder h5 {
+    color: #6AA0DF;
+  }
+
   a {
     font-family: "Almarai_reg", sans-serif;
-  font-size: 18px;
-    font-family:;
+    font-size: 18px;
+    font-weight: 600;
   }
+
   a:hover {
     transition: 0.3s;
     color: #fd7d20;
   }
+
+  .line {
+  width: 10cm;
+  height: 3px; 
+  background-color: #0e1d52; 
+  margin-top: 30px;
+}
+
   @media only screen and (max-width: 900px) {
+
+
+    .nyheder h2 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  
+  }
     .nyheder_container {
       flex-direction: column;
       align-items: center;
-      margin: 20px;
+      margin: 10px;
     }
 
     .nyheder_box {
+      width: 100%;
+      margin: 4px 0;
+    }
+
+    .nyheder_2_box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
       width: 100%;
       margin: 10px 0;
     }

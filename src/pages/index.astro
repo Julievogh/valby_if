@@ -25,7 +25,6 @@ const { title } = Astro.props;
     <link rel="stylesheet" href="/src/css/index.css" />
   </head>
 
-
   <body>
     <div class="hero">
       <video autoplay loop muted plays-inline class="back_video">
@@ -34,17 +33,14 @@ const { title } = Astro.props;
       <header><Navbar /></header>
     </div>
     <main>
-
-
-
-
-     <div class="farvelinje1"> 
-      <ColorBar />
-       <!--  <img src="../public/imgs/farvelinje.svg" alt="" />-->
+      <div class="farvelinje1">
+        <ColorBar />
       </div>
       <div class="welcome">
         <h1>Velkommen til Valby IF</h1>
-        <h3>Fællesskab fødes når jeg bliver til os</h3>
+        <h3>
+          Fællesskab fødes når <span>jeg</span> bliver til <span>os</span>
+        </h3>
       </div>
 
       <Nyheder />
@@ -63,3 +59,9 @@ const { title } = Astro.props;
     </footer>
   </body>
 </html>
+
+<style>
+  h3 span {
+    color: #fd7d20;
+  }
+</style>
