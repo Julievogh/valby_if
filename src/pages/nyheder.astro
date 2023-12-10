@@ -19,8 +19,128 @@ const { title } = Astro.props;
   <body>
     <header><Navbar /></header>
 
-    <main></main>
+    <main>
+      <div class="nyheder_container">
+        <div class="first_nyhed">
+          <div class="nyheder_box_info">
+            <img src="" alt="" />
+            <h5>Nyhed nr 2</h5>
+            <p>Lidt info og mange spændende ting om ting og sager</p>
+            <a href="">Læs mere</a>
+          </div>
+        </div>
+
+        <div class="second_third_nyhed">
+          <div class="nyheder_box_info">
+            <img src="" alt="" />
+            <h5>Nyhed nr 2</h5>
+            <p>Lidt info og mange spændende ting om ting og sager</p>
+            <a href="">Læs mere</a>
+          </div>
+          <div class="nyheder_box_info">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+            <p>Lidt info og mange spændende ting om ting og sager</p>
+            <a href="">Læs mere</a>
+          </div>
+        </div>
+
+        <div class="previous_nyheder">
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+        </div>
+
+        <div class="previous_nyheder">
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+        </div>
+
+        <div class="previous_nyheder">
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+
+            <a href="">Læs mere</a>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer></footer>
   </body>
 </html>
+
+<style>
+  .nyheder_container {
+    margin-top: 160px;
+  }
+  .first_nyhed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .second_third_nyhed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .second_third_nyhed .nyheder_box_info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .previous_nyheder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
