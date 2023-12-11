@@ -1,4 +1,5 @@
 ---
+import BestyrelseCard from "../components/BestyrelseCard.astro";
 import Navbar from "../components/Navbar.astro";
 const { title } = Astro.props;
 ---
@@ -19,8 +20,68 @@ const { title } = Astro.props;
   <body>
     <header><Navbar /></header>
 
-    <main></main>
+    <main>
+      <h1>Bestyrelsen</h1>
+
+      <section>
+        <BestyrelseCard header="Michael Glöde" title="Formand" date="Fra 1969" text1="Jeg hedder Michael og privat er jeg gift med Tina. Vores datter har gået til gymnastik i Valby IF de seneste 8 år. Jeg har været aktiv i Valby IF siden 2012 bl.a. som instruktør på De Seje Krudtugler. Jeg har tidligere været aktiv håndboldspiller på eliteplan og har en ungdomstræneruddannelse i håndbold og gymnastik." text2="Jeg er aktiv i Valby IF, primært fordi min datter går til gymnastik i foreningen, men også fordi jeg gerne vil gøre en indsats for det lokale foreningsliv. Jeg tror på, vi sammen kan skabe et sundt og aktivt fritidsliv for børn og unge her i Valby. Dette ved at vi giver dem mulighed for at være en del af en gymnastikforening, der har for øje at skabe rammer, hvori børn og unge kan udvikle sig både fysisk, socialt og mentalt. Et fællesskab, hvori de oplever at få succes." text3="Jeg er bankuddannet og ansat indenfor finanssektoren." ansvar="Ansvarsområder: Kasserer og administrative forhold for foreningen, samt sæsonplanlægningen.">
+          <img src="../../public/imgs/bestyrelse_imgs/michael_glode.webp" alt="Bestyrelses formand Michael Glöde">
+        </BestyrelseCard>
+        <BestyrelseCard header="Michael Glöde" title="Formand" date="Fra 1969" text1="Jeg hedder Michael og privat er jeg gift med Tina. Vores datter har gået til gymnastik i Valby IF de seneste 8 år. Jeg har været aktiv i Valby IF siden 2012 bl.a. som instruktør på De Seje Krudtugler. Jeg har tidligere været aktiv håndboldspiller på eliteplan og har en ungdomstræneruddannelse i håndbold og gymnastik." text2="Jeg er aktiv i Valby IF, primært fordi min datter går til gymnastik i foreningen, men også fordi jeg gerne vil gøre en indsats for det lokale foreningsliv. Jeg tror på, vi sammen kan skabe et sundt og aktivt fritidsliv for børn og unge her i Valby. Dette ved at vi giver dem mulighed for at være en del af en gymnastikforening, der har for øje at skabe rammer, hvori børn og unge kan udvikle sig både fysisk, socialt og mentalt. Et fællesskab, hvori de oplever at få succes." text3="Jeg er bankuddannet og ansat indenfor finanssektoren." ansvar="Ansvarsområder: Kasserer og administrative forhold for foreningen, samt sæsonplanlægningen.">
+          <img src="../../public/imgs/bestyrelse_imgs/michael_glode.webp" alt="Bestyrelses formand Michael Glöde">
+        </BestyrelseCard>
+      </section>
+    </main>
 
     <footer></footer>
   </body>
 </html>
+
+<style>
+main {
+  margin-top: 160px;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Add this line to center vertically */
+  flex-direction: column;
+  min-height: 100vh; /* Add this line to ensure the content takes at least the full height of the viewport */
+}
+
+img {
+    width: 200px;
+    height: auto;
+    align-self: center;
+  }
+
+body {
+  background-color: #dededf;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    /* Styles for tablets and desktop */
+
+    .bestyrelse_card {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    }
+
+    img{
+        width: 400px;
+    }
+
+    p{
+        max-width: 300px;
+    }
+
+}
+</style>

@@ -1,0 +1,66 @@
+---
+const {header, title, date, text1, text2, text3, ansvar} = Astro.props
+---
+
+<article class="bestyrelse_card">
+    <slot />
+    <div>
+      <h2>{header}</h2>
+      <h3>{title}</h3>
+      <h4>{date}</h4>
+      <p>{text1}</p>
+      <p>{text2}</p>
+      <p>{text3}</p>
+      <p>{ansvar}</p>
+    </div>
+</article>
+
+<style>
+    h2, h3, h4{
+        text-align: center;
+    }
+
+    h4 {
+    font-family: "PoetsenOne", sans-serif;
+    font-size: 18px;
+    color: #252424;
+    font-weight: 400;
+    text-align: center;
+}
+
+  .bestyrelse_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    background-color: #f6f6f7;
+    padding: 15px;
+    border-radius: 14px;
+    align-items: center;
+    margin: 10px;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.1);
+  }
+
+  p {
+    color: #252424;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    /* Styles for tablets and desktop */
+
+    .bestyrelse_card {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    }
+
+    p{
+        max-width: 300px;
+    }
+
+}
+
+</style>
