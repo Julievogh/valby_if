@@ -1,0 +1,102 @@
+<div class="circle_container2">
+        <div class="circle">
+          <div class="tekst_container">
+            <div class="lille_tekst_container">
+              <p class="lille_tekst">Husk det nu!</p>
+              <div class="line"></div>
+            </div>
+            <p class="stor_tekst">tilmelding til sæson 2023-2024</p>
+            <div class="line"></div>
+            <div class="buttons">
+              <button class="hold_button">Hold</button>
+              <button class="tilmeld_button">Tilmeld</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<style>
+ 
+  .circle {
+    width: 240px;
+    height: 240px;
+    background-color: #395d94;
+    border-radius: 50%;
+    padding: 20px;
+  }
+
+  .circle_container2 {
+    display: none;
+  }
+
+  .tekst_container {
+    text-align: left;
+  }
+
+  .lille_tekst_container {
+    display: flex;
+    align-items: center;
+  }
+
+  .lille_tekst {
+    margin: 20px 10px 6px 20px;
+
+    font-size: 12px;
+    color: white;
+  }
+
+  .line {
+    width: 70px;
+    background-color: white;
+    height: 2px;
+    box-shadow: none;
+    margin-top: 12px;
+  }
+
+  .line:nth-child(3) {
+    width: 80px;
+    background-color: white;
+    height: 2px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .stor_tekst {
+    margin-left: 20px;
+    font-size: 28px;
+
+    margin-bottom: 10px;
+    color: #fd7d20;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hold_button,
+  .tilmeld_button {
+    padding: 6px 14px;
+    background-color: #fd7d20;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 900px) {
+ 
+
+    .circle_container2 {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .circle_container2 .circle {
+      margin: 0 auto;
+    }
+  }
+</style>

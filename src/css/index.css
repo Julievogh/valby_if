@@ -21,11 +21,14 @@
 
 .welcome h3 {
   font-size: 36px;
+ 
 
 
 }
 
-
+ h3 span {
+    color: #fd7d20;
+  }
 
 .hero {
   width: 100%;
@@ -61,11 +64,11 @@
   
   
   .hero {
-    height: 32vh; /* Adjust as needed */
+    height: 32vh; 
   }
 
   .back_video {
-    height: 100%; /* Adjust as needed */
+    height: 100%;
   }
 }
 

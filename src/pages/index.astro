@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import ColorBar from "../components/ColorBar.astro";
+import Circle1 from "../components/Circle1.astro";
+import Circle2 from "../components/Circle2.astro";
 import Familien from "../components/Familien.astro";
 import Nyheder from "../components/NyhederComponent.astro";
 import InfoContainer from "../components/InfoContainer.astro";
@@ -33,6 +35,9 @@ const { title } = Astro.props;
       <header><Navbar /></header>
     </div>
     <main>
+      <Circle1 />
+      
+      <div></div>
       <div class="farvelinje1">
         <ColorBar />
       </div>
@@ -44,6 +49,8 @@ const { title } = Astro.props;
       </div>
 
       <Nyheder />
+
+      <Circle2 />
 
       <InfoContainer />
 
@@ -59,9 +66,3 @@ const { title } = Astro.props;
     </footer>
   </body>
 </html>
-
-<style>
-  h3 span {
-    color: #fd7d20;
-  }
-</style>

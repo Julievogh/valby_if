@@ -1,4 +1,4 @@
-<section class="Foelg_med_box">
+<section class="foelg_med_box">
   <div class="foelg_info_topbox">
     <h3>Følg med</h3>
     <div class="foelg_icon">
@@ -17,11 +17,7 @@
 
 <style>
 
-  .foelg_icon {
-margin-right: 110px;
-
-  }
-  .Foelg_med_box {
+  .foelg_med_box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,16 +27,22 @@ margin-right: 110px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - 120px); 
   height: auto;
   margin-top: 40px;
   padding: 0;
-}
-.foelg_info_topbox h3 {
-  margin-left: 110px;
-  
+  margin: 40px 60px 0 60px;
 }
 
+.foelg_info_topbox h3 {
+  text-align: left;
+  margin-bottom: -60px;
+  margin-left: 20px;
+}
+
+.foelg_icon {
+  margin-right: 25px;
+}
 
 .icon {
   width: 2.6rem;
@@ -58,34 +60,28 @@ margin-right: 110px;
 }
 
 .insta_box img {
-  flex: 1; 
-  max-width: 12rem; 
-  width: 100%; 
-  height: auto; 
-  margin: 0.5rem;
+  max-width: 15vw;
 }
 
 @media (max-width: 768px) {
+  .foelg_info_topbox {
+    width: 100%;
+  }
+
   .insta_box {
     flex-direction: row;
     justify-content: center;
-    margin: 24px;
-    padding: 10px;
-    gap: 0;
+    margin: 20px;
+    padding: 14px;
+    gap: 10px;
   }
 
-  .insta_box img {
-    max-width: 20%; 
-  .foelg_info_topbox h3 {
-  margin-left: 25px;
-    
   
-}
 
-.foelg_icon {
-margin-right: 25px;
-
+  .foelg_info_topbox h3 {
+    margin-left: 25px;
   }
 }
+
 
 </style>

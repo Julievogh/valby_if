@@ -1,74 +1,94 @@
 <section class="nyheder">
   <h2>Nyheder</h2>
   <div class="nyheder_container">
-    <div class="nyheder_box">
+    <div class="nyheder_box1">
       <img src="../public/imgs/nyhed1.png" alt="" />
       <h5>Information vedrørende tilmeldinger</h5>
       <a href="">Læs mere</a>
     </div>
     <div class="nyheder_2_box">
-    <div class="nyheder_box">
-      <img src="../public/imgs/nyhed2.png" alt="" />
-      <h5>Information vedrørende tilmeldinger</h5>
-      <a href="">Læs mere</a>
+      <div class="nyheder_box2">
+        <img src="../public/imgs/nyhed2.png" alt="" />
+        <h5>Information vedrørende tilmeldinger</h5>
+        <a href="">Læs mere</a>
+      </div>
+      <div class="nyheder_box2">
+        <img src="../public/imgs/nyhed3.png" alt="" />
+        <h5>Information vedrørende tilmeldinger</h5>
+        <a href="">Læs mere</a>
+      </div>
     </div>
-    <div class="nyheder_box">
-      <img src="../public/imgs/nyhed3.png" alt="" />
-      <h5>Information vedrørende tilmeldinger</h5>
-      <a href="">Læs mere</a>
-    </div>
-  </div>
   </div>
   <div class="flere_nyheder">
-    
     <h5>Tidligere nyheder</h5>
     <a href="nyheder.astro">Klik her</a>
     <div class="line"></div>
   </div>
 </section>
 <style>
-  .nyheder {
-    margin: 40px;
-  }
+ .nyheder {
+  margin: 80px auto; 
+  max-width: 1200px; 
+}
 
-  .nyheder h2 {
-    margin-left: 110px;
+.nyheder h2 {
+  text-align: left; 
   margin-bottom: -60px;
-  }
+  margin-left: 20px;
+}
 
-  .nyheder_container {
+ .nyheder_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 100px auto; 
+  max-width: 1200px; 
+}
+
+  .nyheder_box1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 100px;
+    flex-direction: column;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    margin: 0px 10px 0 20px;
+    max-width: 850px;
+    flex: 2; 
   }
 
-  .nyheder_box {
+  .nyheder_box2 {
     display: flex;
     flex-direction: column;
     padding: 30px;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 14px;
-    margin: 0 10px;
+    margin: 0 20px 0 10px;
+    max-width: 400px;
+    flex: 1;
+  }
+
+  .nyheder_box1 h5,
+  .nyheder_box2 h5,
+  .nyheder_box1 a,
+  .nyheder_box2 a {
+    margin: 10px 0px 0 0px;
+  }
+
+  .nyheder_box1 img {
     max-width: 100%;
-    flex: 1; 
-    .nyheder_box:first-child {
-  order: -1;
+  }
+
+ .nyheder_2_box {
+  display: flex;
+  flex-direction: column;
+  max-width: 35rem; 
+  margin: 0 auto; 
 }
 
-  }
-
-  
-
-  .nyheder_box img {
-    max-width: 100%; 
-  }
-
-  .nyheder_2_box {
-    display: flex;
-    flex-direction: column;
-    width: 30.5%;
+  .nyheder_2_box .nyheder_box2:nth-child(2) {
+    margin: 10px;
   }
 
   .flere_nyheder {
@@ -76,10 +96,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -40px;
   }
 
   .flere_nyheder h5 {
-    color: #6AA0DF;
+    color: #6aa0df;
   }
 
   a {
@@ -94,29 +115,42 @@
   }
 
   .line {
-  width: 10cm;
-  height: 3px; 
-  background-color: #0e1d52; 
-  margin-top: 30px;
-}
-
+    width: 10cm;
+    height: 3px;
+    background-color: #0e1d52;
+    margin-top: 30px;
+  }
   @media only screen and (max-width: 900px) {
+    h2 {
+      font-size: 1.8rem;
+    }
 
+    .nyheder {
+      margin: 40px 20px;
+    }
 
     .nyheder h2 {
-    margin-left: 10px;
-    margin-bottom: 0px;
-  
-  }
+      margin-left: 10px;
+      margin-bottom: 0px;
+    }
+
     .nyheder_container {
       flex-direction: column;
       align-items: center;
       margin: 10px;
     }
 
-    .nyheder_box {
+    .nyheder_box1 {
       width: 100%;
-      margin: 4px 0;
+      margin: 0px;
+    }
+
+    .nyheder_box2 {
+      width: 45%;
+    }
+
+    .nyheder_2_box .nyheder_box2 {
+      margin: 0px;
     }
 
     .nyheder_2_box {
@@ -125,8 +159,14 @@
       justify-content: center;
       align-items: center;
       gap: 10px;
-      width: 100%;
-      margin: 10px 0;
+      width: 98%;
+      margin: 10px 0px;
+       max-width: 100%;
     }
+
+    .flere_nyheder {
+   
+    margin-top: -10px;
+  }
   }
 </style>
