@@ -2,7 +2,18 @@
 import BestyrelseCard from "../components/BestyrelseCard.astro";
 import Navbar from "../components/Navbar.astro";
 const { title } = Astro.props;
+const data = await fetch(
+  "https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/valby_if",
+  {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU"
+    },
+  }
+).then((res) => res.json());
 ---
+          
+          
 
 <!doctype html>
 <html lang="en">
@@ -21,10 +32,13 @@ const { title } = Astro.props;
     <header><Navbar /></header>
 
     <main>
-      <h1>Bestyrelsen</h1>
+      <h1>Bestyrelsen</h1>: any
 
       <section>
-        <BestyrelseCard header="Michael Glöde" title="Formand" date="Fra 1969" text1="Jeg hedder Michael og privat er jeg gift med Tina. Vores datter har gået til gymnastik i Valby IF de seneste 8 år. Jeg har været aktiv i Valby IF siden 2012 bl.a. som instruktør på De Seje Krudtugler. Jeg har tidligere været aktiv håndboldspiller på eliteplan og har en ungdomstræneruddannelse i håndbold og gymnastik." text2="Jeg er aktiv i Valby IF, primært fordi min datter går til gymnastik i foreningen, men også fordi jeg gerne vil gøre en indsats for det lokale foreningsliv. Jeg tror på, vi sammen kan skabe et sundt og aktivt fritidsliv for børn og unge her i Valby. Dette ved at vi giver dem mulighed for at være en del af en gymnastikforening, der har for øje at skabe rammer, hvori børn og unge kan udvikle sig både fysisk, socialt og mentalt. Et fællesskab, hvori de oplever at få succes." text3="Jeg er bankuddannet og ansat indenfor finanssektoren." ansvar="Ansvarsområder: Kasserer og administrative forhold for foreningen, samt sæsonplanlægningen.">
+        {data.map((show) => {
+          return <BestyrelseCard data={show} />;
+        })}
+        <BestyrelseCard board_member_name="Michael Glöde" board_member_title="Formand" board_member_date="Fra 1969" text1="Jeg hedder Michael og privat er jeg gift med Tina. Vores datter har gået til gymnastik i Valby IF de seneste 8 år. Jeg har været aktiv i Valby IF siden 2012 bl.a. som instruktør på De Seje Krudtugler. Jeg har tidligere været aktiv håndboldspiller på eliteplan og har en ungdomstræneruddannelse i håndbold og gymnastik." text2="Jeg er aktiv i Valby IF, primært fordi min datter går til gymnastik i foreningen, men også fordi jeg gerne vil gøre en indsats for det lokale foreningsliv. Jeg tror på, vi sammen kan skabe et sundt og aktivt fritidsliv for børn og unge her i Valby. Dette ved at vi giver dem mulighed for at være en del af en gymnastikforening, der har for øje at skabe rammer, hvori børn og unge kan udvikle sig både fysisk, socialt og mentalt. Et fællesskab, hvori de oplever at få succes." text3="Jeg er bankuddannet og ansat indenfor finanssektoren." ansvar="Ansvarsområder: Kasserer og administrative forhold for foreningen, samt sæsonplanlægningen.">
           <img src="../../public/imgs/bestyrelse_imgs/michael_glode.webp" alt="Bestyrelses formand Michael Glöde">
         </BestyrelseCard>
         <BestyrelseCard header="Michael Glöde" title="Formand" date="Fra 1969" text1="Jeg hedder Michael og privat er jeg gift med Tina. Vores datter har gået til gymnastik i Valby IF de seneste 8 år. Jeg har været aktiv i Valby IF siden 2012 bl.a. som instruktør på De Seje Krudtugler. Jeg har tidligere været aktiv håndboldspiller på eliteplan og har en ungdomstræneruddannelse i håndbold og gymnastik." text2="Jeg er aktiv i Valby IF, primært fordi min datter går til gymnastik i foreningen, men også fordi jeg gerne vil gøre en indsats for det lokale foreningsliv. Jeg tror på, vi sammen kan skabe et sundt og aktivt fritidsliv for børn og unge her i Valby. Dette ved at vi giver dem mulighed for at være en del af en gymnastikforening, der har for øje at skabe rammer, hvori børn og unge kan udvikle sig både fysisk, socialt og mentalt. Et fællesskab, hvori de oplever at få succes." text3="Jeg er bankuddannet og ansat indenfor finanssektoren." ansvar="Ansvarsområder: Kasserer og administrative forhold for foreningen, samt sæsonplanlægningen.">

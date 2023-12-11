@@ -1,13 +1,15 @@
 ---
+const {data} = Astro.props;
 const {header, title, date, text1, text2, text3, ansvar} = Astro.props
+console.log(data);
 ---
 
 <article class="bestyrelse_card">
     <slot />
     <div>
-      <h2>{header}</h2>
-      <h3>{title}</h3>
-      <h4>{date}</h4>
+      <h2>{data.board_member_name}</h2>
+      <h3>{data.board_member_title}</h3>
+      <h4>{data.board_member_date}</h4>
       <p>{text1}</p>
       <p>{text2}</p>
       <p>{text3}</p>
