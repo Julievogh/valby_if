@@ -7,14 +7,14 @@
 /* Fonts */
 @font-face {
   font-family: "PoetsenOne";
-  src: url("/public/fonts/PoetsenOne-Regular.ttf") format("truetype");
+  src: url("/fonts/PoetsenOne-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Almarai_reg";
-  src: url("/public/fonts/Almarai-Regular.ttf") format("truetype");
+  src: url("/fonts/Almarai-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,7 +22,7 @@
 /* Bold */
 @font-face {
   font-family: "Almarai_bold";
-  src: url("/public/fonts/Almarai-Bold.ttf") format("truetype");
+  src: url("/fonts/Almarai-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -30,7 +30,7 @@
 /* Light */
 @font-face {
   font-family: "Almarai_light";
-  src: url("/public/fonts/Almarai-Light.ttf") format("truetype");
+  src: url("/fonts/Almarai-Light.ttf") format("truetype");
   font-weight: lighter;
   font-style: normal;
 }
@@ -38,14 +38,14 @@
 /* Extra Bold */
 @font-face {
   font-family: "Almarai_extra_bold";
-  src: url("/public/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  src: url("/fonts/Almarai-ExtraBold.ttf") format("truetype");
   font-weight: bolder;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AlfaSlabOne";
-  src: url("/public/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  src: url("/fonts/Almarai-ExtraBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -87,7 +87,6 @@ p {
 }
 
 a {
-  
   color: #0e1d52;
 }
 
