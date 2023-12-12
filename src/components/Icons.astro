@@ -1,0 +1,65 @@
+  ---
+
+  ---
+
+
+   <div class="icons">
+        <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+        <a href="https://youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class='bx bxl-tiktok'></i></a>
+    </div>
+
+    <style>
+        .icons {
+  position: fixed;
+  top: 30%; /* Adjust the distance from the top if needed */
+  right: 0; /* Align icons to the right side */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align icons to the top of the column */
+  align-items: flex-end; /* Align icons to the right side */
+  padding: 10px; /* Add padding as needed */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  gap: 1px;
+}
+
+.icons.show {
+  opacity: 1;
+}
+
+i {
+  color: #000;
+  font-size: 6rem;
+}
+
+.icons i {
+  color: #000;
+  transition: 0.07s ease-in;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+    </style>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  var icons = document.querySelector(".icons");
+
+  function showIcons() {
+    icons.classList.add("show");
+  }
+
+  var scrollThreshold = 50;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > scrollThreshold) {
+      showIcons();
+    }
+  });
+});
+    </script>
+
+ 

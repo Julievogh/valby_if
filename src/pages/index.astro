@@ -12,6 +12,8 @@ import ColorBar2 from "../components/ColorBar2.astro";
 import Footer from "../components/Footer.astro";
 import Farvev from "../components/Farvev.astro";
 import Farveh from "../components/Farveh.astro";
+import Icons from "../components/Icons.astro";
+import Subscribe from "../components/Subscribe.astro";
 
 const { title } = Astro.props;
 ---
@@ -39,15 +41,14 @@ const { title } = Astro.props;
     </div>
     <main>
       <Circle1 />
-      
-      <div></div>
+   
       <div class="farvelinje1">
         <Farvev />
       </div>
       <div class="welcome">
         <h1>Velkommen til Valby IF</h1>
         <h3>
-          Fællesskab fødes når <span>jeg</span> bliver til <span>os</span>
+          Fællesskab fødes når <span>JEG</span> bliver til <span>OS</span>
         </h3>
       </div>
 
@@ -60,8 +61,8 @@ const { title } = Astro.props;
       <Familien />
 
       <FoelgMed />
-
-      <Nyhedsbrev />
+      <Subscribe />
+    
       <Farveh />
     </main>
     <footer>
