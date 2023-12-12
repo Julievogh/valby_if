@@ -1,12 +1,13 @@
 ---
 const {data} = Astro.props;
-const {board_member_name, board_member_title, board_member_date, board_member_info1, board_member_info2, board_member_info3, board_member_responsibilities} = Astro.props;
+const {board_member_name, board_member_title, board_member_date, board_member_info1, board_member_info2, board_member_info3, board_member_responsibilities, img_url} = Astro.props;
 console.log(data);
 ---
 
 <article class="bestyrelse_card">
     <slot />
     <div>
+      <img src=`/imgs/bestyrelse_imgs/${img_url}` alt="Bestyrelses medlem" loading="lazy">
       <h2>{board_member_name}</h2>
       <h3>{board_member_title}</h3>
       <h4>{board_member_date}</h4>
@@ -21,6 +22,12 @@ console.log(data);
     h2, h3, h4{
         text-align: center;
     }
+
+    img {
+    width: 200px;
+    height: auto;
+    align-self: center;
+  }
 
     h4 {
     font-family: "PoetsenOne", sans-serif;

@@ -37,8 +37,7 @@ console.log(data);
 
       <section>
         {data.map((show) => {
-          <img src=`/imgs/bestyrelse_imgs${show.board_member_img_url}` alt="Bestyrelses medlem" loading="lazy">
-          return <BestyrelseCard board_member_name={show.board_member_name} board_member_title={show.board_member_title} board_member_date={show.board_member_date} board_member_info1={show.board_member_info1} board_member_info2={show.board_member_info2} board_member_info3={show.board_member_info3} board_member_responsibilities={show.board_member_responsibilities}>
+          return <BestyrelseCard img_url={show.board_member_img_url} board_member_name={show.board_member_name} board_member_title={show.board_member_title} board_member_date={show.board_member_date} board_member_info1={show.board_member_info1} board_member_info2={show.board_member_info2} board_member_info3={show.board_member_info3} board_member_responsibilities={show.board_member_responsibilities}>
         </BestyrelseCard>;
         })}
       </section>
@@ -61,12 +60,6 @@ section{
   min-height: 100vh;
 }
 
-img {
-    width: 200px;
-    height: auto;
-    align-self: center;
-  }
-
 body {
   background-color: #dededf;
 }
@@ -88,6 +81,7 @@ h1 {
 
     img{
         width: 400px;
+        align-items: center;
     }
 
     p{
