@@ -1,26 +1,74 @@
 ---
-import Navbar from "../components/Navbar.astro";
-const { title } = Astro.props;
+import Navbar from '../components/Navbar.astro';
+import Calendar from '../components/Calendar.astro';
+import Toppage from '../components/Toppage.astro';
+import Imgboks from '../components/Imgboks.astro';
+import Heroheader from '../components/Heroheader.astro';
+import H1 from '../components/H1.astro';
+import Farvev from '../components/Farvev.astro';
+import Farvem from '../components/Farvem.astro';
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com//css3?family=Material+Symbols+Rounden:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <meta name="generator" content={Astro.generator} />
-
-    <title>Valby IF</title>
-    <link rel="stylesheet" href="./src/css/generel.css" />
-    <link rel="stylesheet" href="/src/css/index.css" />
+    <title>Astro</title>
   </head>
+    
   <body>
-    <header><Navbar /></header>
+    <header>
+      <Navbar />
+      <Heroheader />
+      <Farvev />
+    </header>
+    <section class="h1">
+      <H1 />
+    </section>
+      
+    <section class="event">
+      <Toppage />
+	 
+      <Imgboks />
 
-    <main></main>
+    </section>
+	<section class="farv">
+	<Farvem />
+	</section>
 
-    <footer></footer>
+    <section class="kalend">
+		    
+      <Calendar />
+    </section>
   </body>
 </html>
+
+<style>
+  body {
+    background: #e6e4e4;
+  }
+
+  .event {
+    display: flex;
+    min-height: 100vh;
+    padding: 0 9% 2rem;
+    position: relative;
+  }
+
+
+
+  .kalend {
+    margin-top: -6em;
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+	
+  }
+
+  .h1 {
+    padding: 0 10.5% 0;
+  }
+</style>

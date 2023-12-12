@@ -1,0 +1,83 @@
+ <div class="box2">
+        <div class="box2-sm red"></div>
+        <div class="box2-sm orange"></div>
+        <div class="box2-sm yellow "></div>
+        <div class="box2-sm green "></div>
+
+    </div>
+
+    <style>
+
+        .box {
+  display: flex;
+  width: 70%;
+  height: 8px;
+  margin: 0px 0px 60px 0px;
+}
+
+.box1 {
+  display: flex;
+  width: 70%;
+  height: 8px;
+  margin: 0px 0px 60px auto; /* Use margin-left: auto */
+}
+.box1-sm {
+  height: 28px;
+  margin: 0;
+  flex-grow: 1;
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.box1-sm:hover {
+  flex-grow: 12;
+}
+
+.box2 {
+  display: flex;
+  width: 70%;
+  height: 8px;
+  margin: 0 auto 60px auto; /* Use margin: 0 auto */
+  justify-content: flex-end;
+  margin-bottom: 4rem;
+}
+.box2-sm {
+  height: 28px;
+  margin: 0;
+  flex-grow: 1;
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.box2-sm:hover {
+  flex-grow: 12;
+}
+
+.box-sm {
+  height: 28px;
+  margin: 0;
+  flex-grow: 1;
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.box-sm:hover {
+  flex-grow: 12;
+}
+
+.red {
+  background-color: #1e5fc7;
+}
+
+.orange {
+  background-color: rgb(55, 121, 221);
+}
+
+.yellow {
+  background-color: #558cc0;
+}
+
+.green {
+  background-color: #cd683d;
+}
+    </style>

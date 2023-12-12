@@ -10,6 +10,9 @@ import FoelgMed from "../components/FoelgMed.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import ColorBar2 from "../components/ColorBar2.astro";
 import Footer from "../components/Footer.astro";
+import Farvev from "../components/Farvev.astro";
+import Farveh from "../components/Farveh.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -39,7 +42,7 @@ const { title } = Astro.props;
       
       <div></div>
       <div class="farvelinje1">
-        <ColorBar />
+        <Farvev />
       </div>
       <div class="welcome">
         <h1>Velkommen til Valby IF</h1>
@@ -59,7 +62,7 @@ const { title } = Astro.props;
       <FoelgMed />
 
       <Nyhedsbrev />
-      <ColorBar2 />
+      <Farveh />
     </main>
     <footer>
       <Footer />
