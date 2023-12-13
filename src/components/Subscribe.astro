@@ -1,184 +1,78 @@
- <form>
-        <label for="email">Tilmeld dig vores nyhedsbrev</label>
-        <input type="email" value="" name="email" placeholder="email address" required>
-        <input type="submit" value="Tilmeld" name="subscribe">
-    </form>
+<form>
+  <label for="email">Tilmeld dig vores nyhedsbrev</label>
+  <input
+    type="email"
+    value=""
+    name="email"
+    placeholder="email address"
+    required
+  />
+  <input type="submit" value="Tilmeld" name="subscribe" />
+</form>
 
-    <style>
-
-form {
-  position: relative;
-  margin: 50px auto 0;
-  width: 600px;
-  padding: 50px;
-  margin-top: 8rem;
-
-  line-height: 1.15;
-}
-label[for="email"] {
-  display: block;
-  padding: 20px 0;
-  font-size: 3.5em;
-  font-weight: 600;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
-  margin-bottom: 20px;
-  width: 30%;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-  color: #000;
-}
-label[for="email"]:hover {
-  width: 40%;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-input:focus {
-  outline: 0;
-}
-
-input[type="email"] {
-  background: #fff;
-  border: 0;
-  width: 320px;
-  padding: 30px;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  float: left;
-}
-input[type="submit"] {
-  color: #fff;
-  background: linear-gradient(to right, #000 50%, rgba(0, 140, 255, 0.8) 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  border: 0;
-  width: 180px;
-  padding: 30px;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-  cursor: pointer;
-}
-input[type="submit"]:hover {
-  background: linear-gradient(to right, #000 50%, rgba(0, 140, 255, 0.8) 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-form:before {
-  content: "";
-  background: rgba(0, 126, 229, 0.8);
-  display: block;
-  width: 200px;
-  height: 520px;
-  position: absolute;
-  z-index: -1;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  top: -100px;
-  left: 10px;
-}
-
-@media (max-width: 600px) {
-
-  form:before {
-    content: "";
-    background: rgba(0, 126, 229, 0.8);
-    display: block;
-    width: 150px;
-    height: 420px;
-    position: absolute;
-    z-index: -1;
-    transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    top:45px;
-    left: -5px;
-  }
-
-
-form {
-  position: relative;
-  margin: 50px auto 0;
-  width: 400px;
-  padding: 50px;
-  
-
-  line-height: 1.15;
-}
-label[for="email"] {
-  display: block;
-  padding: 20px 0;
-  font-size: 2em;
-  font-weight: 600;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
-  margin-bottom: 20px;
-  width: 30%;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease;
-  color: #000;
-  margin-top: 6rem;
-}
-  
+<style>
   form {
     position: relative;
     margin: 50px auto 0;
-    width: 400px;
+    width: 600px;
     padding: 50px;
-    margin-top: -50px;
+    margin-top: 8rem;
+font-family: PoetsenOne;
+    line-height: 1.15;
+    
+  }
+  label[for="email"] {
+    display: block;
+    padding: 20px 0;
+    font-size: 3.5em;
+    font-weight: 600;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    border-top: 5px solid #2E333A;
+    border-bottom: 5px solid #2E333A;
+    margin-bottom: 20px;
+    width: 30%;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    color: #0E1D52;
+  }
+  label[for="email"]:hover {
+    width: 40%;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+  }
+  input:focus {
+    outline: 0;
   }
 
   input[type="email"] {
     background: #fff;
     border: 0;
-    width: 210px;
-    padding: 20px;
-    font-size: 12px;
-    font-weight: 500;
+    width: 320px;
+    padding: 30px;
+    font-size: 14px;
+    font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
     float: left;
   }
-
   input[type="submit"] {
     color: #fff;
-    background: linear-gradient(to right, #000 50%, rgba(0, 140, 255, 0.8) 50%);
+    background: linear-gradient(to right, #2E333A 50%, #395d94 50%);
     background-size: 200% 100%;
     background-position: left bottom;
     border: 0;
-    width: 90px;
-    padding: 20px;
-    text-align: center;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    width: 180px;
+    padding: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
     text-transform: uppercase;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -187,5 +81,118 @@ label[for="email"] {
     transition: all 200ms ease;
     cursor: pointer;
   }
-}
-    </style>
+  input[type="submit"]:hover {
+    background: linear-gradient(to right, #2E333A 50%, #395D94 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+  }
+  form:before {
+    content: "";
+    background: #6AA0DF;
+    display: block;
+    width: 200px;
+    height: 520px;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: -100px;
+    left: 10px;
+  }
+
+  @media (max-width: 600px) {
+    form:before {
+      content: "";
+      background: #6AA0DF;
+      display: block;
+      width: 150px;
+      height: 420px;
+      position: absolute;
+      z-index: -1;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      top: 45px;
+      left: -5px;
+    }
+
+    form {
+      position: relative;
+      margin: 50px auto 0;
+      width: 400px;
+      padding: 50px;
+
+      line-height: 1.15;
+    }
+    label[for="email"] {
+      display: block;
+      padding: 20px 0;
+      font-size: 2em;
+      font-weight: 600;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      border-top: 5px solid #2E333A;
+      border-bottom: 5px solid #2E333A;
+      margin-bottom: 20px;
+      width: 30%;
+      -webkit-transition: all 200ms ease;
+      -moz-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      transition: all 200ms ease;
+      color: #2E333A;
+      margin-top: 6rem;
+    }
+
+    form {
+      position: relative;
+      margin: 50px auto 0;
+      width: 400px;
+      padding: 50px;
+      margin-top: -50px;
+    }
+
+    input[type="email"] {
+      background: #fff;
+      border: 0;
+      width: 210px;
+      padding: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      float: left;
+    }
+
+    input[type="submit"] {
+      color: #fff;
+      background: linear-gradient(
+        to right,
+        #2E333A 50%,
+        #6AA0DF 50%
+      );
+      background-size: 200% 100%;
+      background-position: left bottom;
+      border: 0;
+      width: 90px;
+      padding: 20px;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      -webkit-transition: all 200ms ease;
+      -moz-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      transition: all 200ms ease;
+      cursor: pointer;
+    }
+  }
+</style>
