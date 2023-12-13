@@ -6,8 +6,8 @@ console.log(data);
 
 <article class="bestyrelse_card">
     <slot />
+    <img src=`/imgs/bestyrelse_imgs/${img_url}` alt="Bestyrelses medlem" loading="lazy">
     <div>
-      <img src=`/imgs/bestyrelse_imgs/${img_url}` alt="Bestyrelses medlem" loading="lazy">
       <h2>{board_member_name}</h2>
       <h3>{board_member_title}</h3>
       <h4>{board_member_date}</h4>
@@ -19,15 +19,16 @@ console.log(data);
 </article>
 
 <style>
-    h2, h3, h4{
+    h2, h3{
         text-align: center;
     }
 
     img {
     width: 200px;
     height: auto;
-    align-self: center;
-  }
+    margin: 0 auto; 
+    display: block;
+}
 
     h4 {
     font-family: "PoetsenOne", sans-serif;
@@ -37,18 +38,19 @@ console.log(data);
     text-align: center;
 }
 
-  .bestyrelse_card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
-    background-color: #f6f6f7;
-    padding: 15px;
-    border-radius: 14px;
-    align-items: center;
-    margin: 10px;
-    box-shadow: 4px 4px 6px rgba(0,0,0,0.1);
-  }
+.bestyrelse_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  max-width: 400px;
+  background-color: #f6f6f7;
+  padding: 15px;
+  border-radius: 14px;
+  margin: 10px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
   p {
     color: #252424;
@@ -63,7 +65,8 @@ console.log(data);
     .bestyrelse_card {
     display: flex;
     flex-direction: row;
-    width: auto;
+    max-width: 750px;
+    min-width: 750px;
     }
 
     p{
