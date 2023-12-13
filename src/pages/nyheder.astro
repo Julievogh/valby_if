@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
 ---
 
@@ -20,31 +21,98 @@ const { title } = Astro.props;
     <header><Navbar /></header>
 
     <main>
+      <div class="container nyheder_container first_nyhed">
+        <div class="nyheder_box_info">
+          <img src="/imgs/nyhed1.png" alt="" />
+          <div class="text">
+            <h3>Nyhed nr 1</h3>
+            <p>
+              Lidt info og mange spændende ting om ting og sager<span
+                class="read-more">Læs mere</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay" id="overlay1">
+        <div class="popup">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <p>Her står nyheden - wauw</p>
+        </div>
+      </div>
+
+      <!--
+
       <div class="nyheder_container">
         <div class="first_nyhed">
           <div class="nyheder_box_info">
-            <img src="" alt="" />
-            <h5>Nyhed nr 2</h5>
-            <p>Lidt info og mange spændende ting om ting og sager</p>
-            <a href="">Læs mere</a>
+            <img src="/imgs/nyhed1.png" alt="" />
+            <div class="text">
+              <h5>Nyhed nr 2</h5>
+              <p>Lidt info og mange spændende ting om ting og sager</p>
+              <a href="">Læs mere</a>
+            </div>
           </div>
         </div>
 
-        <div class="second_third_nyhed">
-          <div class="nyheder_box_info">
-            <img src="" alt="" />
-            <h5>Nyhed nr 2</h5>
-            <p>Lidt info og mange spændende ting om ting og sager</p>
-            <a href="">Læs mere</a>
-          </div>
-          <div class="nyheder_box_info">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-            <p>Lidt info og mange spændende ting om ting og sager</p>
-            <a href="">Læs mere</a>
+ -->
+
+      <div class="container nyheder_container second_third_nyhed">
+        <div class="nyheder_box_info">
+          <img src="/imgs/nyhed2.png" alt="" />
+          <div class="text">
+            <h3>Nyhed nr 2</h3>
+            <p>
+              Blabla kloge ord står her - jubii <span class="read-more"
+                >Læs mere</span
+              >
+            </p>
           </div>
         </div>
+      </div>
 
+      <div class="overlay" id="overlay2">
+        <div class="popup">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <p>Her står nyheden - wauw</p>
+        </div>
+      </div>
+
+      <div class="container nyheder_container second_third_nyhed">
+        <div class="nyheder_box_info">
+          <img src="/imgs/nyhed3.png" alt="" />
+          <div class="text">
+            <h3>Nyhed nr 3</h3>
+            <p>
+              yuhsduifh hsjdfj <span class="read-more">Læs mere</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay" id="overlay1">
+    <div class="popup">
+      <span class="close" onclick="closePopup('overlay1')">&times;</span>
+      <p>Her står nyheden - wauw</p>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay2">
+    <div class="popup">
+      <span class="close" onclick="closePopup('overlay2')">&times;</span>
+      <p>Her står nyheden - wauw</p>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay3">
+    <div class="popup">
+      <span class="close" onclick="closePopup('overlay3')">&times;</span>
+      <p>Her står nyheden - wauw</p>
+    </div>
+  </div>
+
+      <div class="previous_container">
         <div class="previous_nyheder">
           <div class="previous_box">
             <img src="" alt="" />
@@ -110,37 +178,137 @@ const { title } = Astro.props;
       </div>
     </main>
 
-    <footer></footer>
+    <footer>
+      <Footer />
+    </footer>
   </body>
+
+  <style>
+    main {
+      display: grid;
+      place-items: center;
+      margin-top: 160px;
+    }
+
+    .read-more {
+      color: blue;
+      cursor: pointer;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+    .nyheder_container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .first_nyhed {
+      grid-column: span 2;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+    }
+
+    .second_third_nyhed {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .second_third_nyhed .nyheder_box_info {
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .previous_nyheder {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      place-items: center;
+      margin: 20px;
+    }
+
+    .previous_nyheder .previous_box {
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .nyheder_box_info img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .first_nyhed .nyheder_box_info {
+      display: flex;
+      flex-direction: row;
+    }
+  </style>
+
+  <script>
+    function openPopup(overlayId) {
+      document.getElementById(overlayId).style.display = "block";
+    }
+
+    function closePopup(overlayId) {
+      document.getElementById(overlayId).style.display = "none";
+    }
+
+    // Adjust the event listener to target the correct overlay
+    document.querySelector(".read-more").addEventListener("click", function () {
+      openPopup("overlay1");
+    });
+
+    // Adjust the event listener to target the correct overlay
+    document
+      .querySelector(".second_third_nyhed .read-more")
+      .addEventListener("click", function () {
+        openPopup("overlay2");
+      });
+
+    // Adjust the event listener to target the correct overlay
+    window.addEventListener("click", function (event) {
+      if (event.target === document.getElementById("overlay1")) {
+        closePopup("overlay1");
+      } else if (event.target === document.getElementById("overlay2")) {
+        closePopup("overlay2");
+      }
+    });
+  </script>
 </html>
-
-<style>
-  .nyheder_container {
-    margin-top: 160px;
-  }
-  .first_nyhed {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .second_third_nyhed {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .second_third_nyhed .nyheder_box_info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .previous_nyheder {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-</style>
