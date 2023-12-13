@@ -1,6 +1,6 @@
 ---
 const {data} = Astro.props;
-const {board_member_name, board_member_title, board_member_date, board_member_info1, board_member_info2, board_member_info3, board_member_responsibilities, img_url} = Astro.props;
+const {board_member_name, board_member_title, board_member_date, board_member_info1, board_member_info2, board_member_info3, board_member_info4, board_member_responsibilities, img_url} = Astro.props;
 console.log(data);
 ---
 
@@ -13,6 +13,7 @@ console.log(data);
       <p>{board_member_info1}</p>
       <p>{board_member_info2}</p>
       <p>{board_member_info3}</p>
+      <p>{board_member_info4}</p>
       <p>{board_member_responsibilities}</p>
     </div>
 </article>
