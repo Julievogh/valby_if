@@ -2,88 +2,79 @@
 import Farvem from "../components/Farvem.astro";
 ---
 
-
-
 <section class="nyheder">
+  
   <h2>Nyheder</h2>
+  <div class="line"></div>
   <div class="nyheder_container">
-    <div class="nyheder_box1">
+    <div class="nyheder_box2">
       <img src="/imgs/nyhed1.png" alt="" />
       <h5>Information vedrørende tilmeldinger</h5>
       <a href="">Læs mere</a>
     </div>
-    <div class="nyheder_2_box">
-      <div class="nyheder_box2">
-        <img src="/imgs/nyhed2.png" alt="" />
-        <h5>Information vedrørende tilmeldinger</h5>
-        <a href="">Læs mere</a>
-      </div>
-      <div class="nyheder_box2">
-        <img src="/imgs/nyhed3.png" alt="" />
-        <h5>Information vedrørende tilmeldinger</h5>
-        <a href="">Læs mere</a>
-      </div>
+    <div class="nyheder_box2 box_hide">
+      <img src="/imgs/nyhed2.png" alt="" />
+      <h5>Information vedrørende tilmeldinger</h5>
+      <a href="">Læs mere</a>
+    </div>
+    <div class="nyheder_box2 box_hide">
+      <img src="/imgs/nyhed3.png" alt="" />
+      <h5>Information vedrørende tilmeldinger</h5>
+      <a href="">Læs mere</a>
     </div>
   </div>
   <div class="flere_nyheder">
     <h5>Tidligere nyheder</h5>
     <a href="nyheder.astro">Klik her</a>
-<div class="linje">
+    <div class="linje">
       <Farvem />
-      </div>
-
-
+    </div>
   </div>
 </section>
+
 <style>
- .nyheder {
-  margin: 80px auto; 
-  max-width: 1200px; 
-}
 
-.linje {
-  width: 80vw;
-  margin-top: 6rem;
-  margin-bottom: -1rem;
-}
-
-.nyheder h2 {
-  text-align: left; 
-  margin-bottom: -60px;
-  margin-left: 20px;
-}
-
- .nyheder_container {
+  .line {
+    width: 200px;
+    height: 4px;
+    background-color: #0e1d52;
+  }
+  .nyheder {
+  margin: 60px auto 0px auto;
+  max-width: 1100px;
   display: flex;
+  flex-direction: column;
+  align-items: center; 
   justify-content: center;
-  align-items: flex-start;
-  margin: 100px auto; 
-  max-width: 1200px; 
+  text-align: center;
 }
 
-  .nyheder_box1 {
+  
+
+  .nyheder h2 {
+    text-align: center;
+    margin-bottom: -60px;
+    margin-left: 20px;
+  }
+
+  .nyheder_container {
     display: flex;
-    flex-direction: column;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
-    margin: 0px 10px 0 20px;
-    max-width: 850px;
-    flex: 2; 
+    justify-content: center;
+    align-items: flex-start;
+    margin: 100px auto;
+    max-width: 100%;
   }
 
   .nyheder_box2 {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
-    margin: 0 20px 0 10px;
-    max-width: 400px;
-    flex: 1;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 20%;
+  flex: 1;
+}
 
   .nyheder_box1 h5,
   .nyheder_box2 h5,
@@ -96,12 +87,12 @@ import Farvem from "../components/Farvem.astro";
     max-width: 100%;
   }
 
- .nyheder_2_box {
-  display: flex;
-  flex-direction: column;
-  max-width: 35rem; 
-  margin: 0 auto; 
-}
+  .nyheder_2_box {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
 
   .nyheder_2_box .nyheder_box2:nth-child(2) {
     margin: 10px;
@@ -112,17 +103,25 @@ import Farvem from "../components/Farvem.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -40px;
+    margin-top: -60px;
   }
 
   .flere_nyheder h5 {
     color: #6aa0df;
+    font-size: 24px;
   }
 
-  a {
+  .flere_nyheder a {
     font-family: "Almarai_reg", sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
+  }
+
+  .nyheder_box2 a {
+    font-family: "Almarai_reg", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    align-self: center;
   }
 
   a:hover {
@@ -130,54 +129,19 @@ import Farvem from "../components/Farvem.astro";
     color: #fd7d20;
   }
 
-
   @media only screen and (max-width: 900px) {
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    .nyheder {
-      margin: 40px 20px;
-    }
-
-    .nyheder h2 {
-      margin-left: 10px;
-      margin-bottom: 0px;
-    }
-
     .nyheder_container {
-      flex-direction: column;
-      align-items: center;
-      margin: 10px;
-    }
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
 
-    .nyheder_box1 {
-      width: 100%;
-      margin: 0px;
-    }
+  .nyheder_box2 {
+     width: 100%;
+  }
 
-    .nyheder_box2 {
-      width: 45%;
-    }
-
-    .nyheder_2_box .nyheder_box2 {
-      margin: 0px;
-    }
-
-    .nyheder_2_box {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      width: 98%;
-      margin: 10px 0px;
-       max-width: 100%;
-    }
-
-    .flere_nyheder {
-   
-    margin-top: -10px;
+  .box_hide {
+    display: none;
   }
   }
 </style>
