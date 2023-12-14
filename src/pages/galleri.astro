@@ -19,8 +19,63 @@ const { title } = Astro.props;
   <body>
     <header><Navbar /></header>
 
-    <main></main>
+    <main>
+      <div class="video_container">
+        <h2>Videoer</h2>
+        <section class="video_section">
+          <iframe width="380" height="315" src="https://www.youtube.com/embed/joW-nj-cg64" frameborder="0" allowfullscreen></iframe>
+          <iframe width="380" height="315" src="https://www.youtube.com/embed/Oqrr-LuSjbs" frameborder="0" allowfullscreen></iframe>
+          <iframe width="380" height="315" src="https://www.youtube.com/embed/Sygec2Ri1MU" frameborder="0" allowfullscreen></iframe>
+        </section>
+      </div>
+      
+      <div class="img_container">
+        <h2>Billeder</h2>
+        <section class="img_section">
+          <img src="imgs/bestyrelse_imgs/henrik_olsen.webp" alt="">
+        </section>
+      </div>
+    </main>
 
     <footer></footer>
   </body>
 </html>
+
+<style>
+  .video_container{
+  margin: 160px 10px 10px 10px;
+  text-align: center;
+  background-color: #f6f6f7;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .video_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  iframe{
+    margin: 15px 0 15px;
+  }
+  .img_container{
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    background-color: #f6f6f7;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .img_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img{
+    margin: 15px 0 15px;
+    width: 380px;
+    height: 315px;
+  }
+</style>
