@@ -290,19 +290,18 @@ const { title } = Astro.props;
       document.getElementById(overlayId).style.display = "none";
     }
 
-    // Adjust the event listener to target the correct overlay
     document.querySelector(".read-more").addEventListener("click", function () {
       openPopup("overlay1");
     });
 
-    // Adjust the event listener to target the correct overlay
+    
     document
       .querySelector(".second_third_nyhed .read-more")
       .addEventListener("click", function () {
         openPopup("overlay2");
       });
 
-    // Adjust the event listener to target the correct overlay
+    
     window.addEventListener("click", function (event) {
       if (event.target === document.getElementById("overlay1")) {
         closePopup("overlay1");
