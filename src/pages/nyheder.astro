@@ -21,7 +21,7 @@ const { title } = Astro.props;
     <header><Navbar /></header>
 
     <main>
-      <div class="container nyheder_container first_nyhed">
+      <div class="nyheder_container first_nyhed">
         <div class="nyheder_box_info">
           <img src="/imgs/nyhed1.png" alt="" />
           <div class="text">
@@ -38,144 +38,144 @@ const { title } = Astro.props;
       <div class="overlay" id="overlay1">
         <div class="popup">
           <span class="close" onclick="closePopup()">&times;</span>
-          <p>Her står nyheden - wauw</p>
+          <p>Så er vi næsten klar til at åbne for den kommende sæsons tilmeldinger, sæson 2023/24.
+Vi anbefaler at man læser holdbeskrivelserne godt igennem inden man melder sit barn til et børnehold. Der er sat en aldersgrænse af en grund for at få den bedste fordeling af børnene.
+
+Det kan være rigtig godt ikke altid at være den ”yngste” på et hold, også selv om man er motorisk dygtig. Der er meget at lære ved at være ”den store” og der vil stadig være gymnastiske udfordringer på holdet, det sørger vores instruktører for.
+
+Vi anbefaler også, at man læser vejledningen til tilmeldingen godt igennem, så man ved hvad man skal.
+
+Man vil opdage, at der allerede er reserveret pladser på vores hold, inden tilmeldingen åbner. Disse pladser er bl.a. reserveret til børn/unge i social udsatte positioner, til børn af frivillige bestyrelsesmedlemmer, hjælpetrænere i foreningen og børn af instruktører i foreningen.
+
+Vi sidder klar ved telefonerne på tilmeldingsaftnerne og ringer ud - skriv blot til bestyrelsesmailen med jeres telefonnummer, hvis noget driller.
+
+Husk endelig at skrive jer på ventelisten, hvis det kommer dertil. Systemet tæller hvert klik og reserverer derfra pladsen i 10 min. Hvis en bruger klikker 2 gange via 2 forskellige browsere, systemreserveres begge "klik". Derfor kan man havne på ventelisten i en overgang og inden for kort tid få tilbudt pladsen.
+
+Hold derfor også godt øje med jeres mail og sms i de følgende 18 timer. Alle der får plads fra ventelisten har 18 timer til at bekræfte denne plads og betale, efter de 18 timer går tilbudt plads videre til den næste på listen og man mister den tilbudte plads. Dette sker automatisk.
+
+Som I kan se har vi måtte ændre lidt i aldersfordelingen på holdene i år, så vi har plads til flest mulige børn. Dette da vi har et meget stort pres med mange 10-11 årige piger. Derfor har vi også oprettet et helt nyt hold 9-11 år, Torsdags Tornadoerne.
+
+Hvis jeres barn havner på ventelisten på et børnehold, vil vi se om vi kan finde alternative tilbud til jer og sende jer en besked vedr. dette.
+
+Vi glæder os til at sæsonen skal I gang og til at se gymnasterne og jer ude i hallerne
+
+
+De bedste hilsner
+Bestyrelsen, Valby IF-Gymnastik</p>
         </div>
       </div>
 
-      <!--
-
-      <div class="nyheder_container">
-        <div class="first_nyhed">
+      <div class="container23">
+        <div class="nyheder_container second_third_nyhed">
           <div class="nyheder_box_info">
-            <img src="/imgs/nyhed1.png" alt="" />
+            <img src="/imgs/nyhed2.png" alt="" />
             <div class="text">
-              <h5>Nyhed nr 2</h5>
-              <p>Lidt info og mange spændende ting om ting og sager</p>
-              <a href="">Læs mere</a>
+              <h3>Nyhed nr 2</h3>
+              <p>
+                Blabla kloge ord står her - jubii <span class="read-more"
+                  >Læs mere</span
+                >
+              </p>
             </div>
           </div>
         </div>
 
- -->
-
-      <div class="container nyheder_container second_third_nyhed">
-        <div class="nyheder_box_info">
-          <img src="/imgs/nyhed2.png" alt="" />
-          <div class="text">
-            <h3>Nyhed nr 2</h3>
-            <p>
-              Blabla kloge ord står her - jubii <span class="read-more"
-                >Læs mere</span
-              >
-            </p>
+        <div class="overlay" id="overlay2">
+          <div class="popup">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Her står nyheden - wauw</p>
           </div>
+        </div>
+
+        <div class="nyheder_container second_third_nyhed nyheder">
+          <div class="nyheder_box_info">
+            <img src="/imgs/nyhed3.png" alt="" />
+            <div class="text">
+              <h3>Nyhed nr 3</h3>
+              <p>
+                yuhsduifh hsjdfj <span class="read-more">Læs mere</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay" id="overlay1">
+        <div class="popup">
+          <span class="close" onclick="closePopup('overlay1')">&times;</span>
+          <p>Her står nyheden - wauw</p>
         </div>
       </div>
 
       <div class="overlay" id="overlay2">
         <div class="popup">
-          <span class="close" onclick="closePopup()">&times;</span>
+          <span class="close" onclick="closePopup('overlay2')">&times;</span>
           <p>Her står nyheden - wauw</p>
         </div>
       </div>
 
-      <div class="container nyheder_container second_third_nyhed">
-        <div class="nyheder_box_info">
-          <img src="/imgs/nyhed3.png" alt="" />
-          <div class="text">
-            <h3>Nyhed nr 3</h3>
-            <p>
-              yuhsduifh hsjdfj <span class="read-more">Læs mere</span>
-            </p>
-          </div>
+      <div class="overlay" id="overlay3">
+        <div class="popup">
+          <span class="close" onclick="closePopup('overlay3')">&times;</span>
+          <p>Her står nyheden - wauw</p>
         </div>
       </div>
-
-      <div class="overlay" id="overlay1">
-    <div class="popup">
-      <span class="close" onclick="closePopup('overlay1')">&times;</span>
-      <p>Her står nyheden - wauw</p>
-    </div>
-  </div>
-
-  <div class="overlay" id="overlay2">
-    <div class="popup">
-      <span class="close" onclick="closePopup('overlay2')">&times;</span>
-      <p>Her står nyheden - wauw</p>
-    </div>
-  </div>
-
-  <div class="overlay" id="overlay3">
-    <div class="popup">
-      <span class="close" onclick="closePopup('overlay3')">&times;</span>
-      <p>Her står nyheden - wauw</p>
-    </div>
-  </div>
 
       <div class="previous_container">
-        <div class="previous_nyheder">
+        <div class="previous_nyheder nyheder_box_info">
           <div class="previous_box">
             <img src="" alt="" />
             <h5>Nyhed nr 3</h5>
-
+<img src="/imgs/nyhed2.png" alt="" />
             <a href="">Læs mere</a>
           </div>
           <div class="previous_box">
             <img src="" alt="" />
             <h5>Nyhed nr 3</h5>
-
+<img src="/imgs/nyhed1.png" alt="" />
             <a href="">Læs mere</a>
           </div>
           <div class="previous_box">
             <img src="" alt="" />
             <h5>Nyhed nr 3</h5>
-
-            <a href="">Læs mere</a>
-          </div>
-        </div>
-
-        <div class="previous_nyheder">
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-
+<img src="/imgs/nyhed2.png" alt="" />
             <a href="">Læs mere</a>
           </div>
           <div class="previous_box">
             <img src="" alt="" />
             <h5>Nyhed nr 3</h5>
-
-            <a href="">Læs mere</a>
-          </div>
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-
+<img src="/imgs/nyhed1.png" alt="" />
             <a href="">Læs mere</a>
           </div>
         </div>
 
-        <div class="previous_nyheder">
+        <div class="previous_nyheder nyheder_box_info">
           <div class="previous_box">
             <img src="" alt="" />
             <h5>Nyhed nr 3</h5>
-
+<img src="/imgs/nyhed3.png" alt="" />
             <a href="">Læs mere</a>
           </div>
           <div class="previous_box">
             <img src="" alt="" />
             <h5>Nyhed nr 3</h5>
-
+<img src="/imgs/nyhed1.png" alt="" />
             <a href="">Læs mere</a>
           </div>
           <div class="previous_box">
             <img src="" alt="" />
             <h5>Nyhed nr 3</h5>
-
+<img src="/imgs/nyhed2.png" alt="" />
+            <a href="">Læs mere</a>
+          </div>
+          <div class="previous_box">
+            <img src="" alt="" />
+            <h5>Nyhed nr 3</h5>
+<img src="/imgs/nyhed3.png" alt="" />
             <a href="">Læs mere</a>
           </div>
         </div>
-      </div>
+
+      
     </main>
 
     <footer>
@@ -185,9 +185,8 @@ const { title } = Astro.props;
 
   <style>
     main {
-      display: grid;
-      place-items: center;
-      margin-top: 160px;
+     
+      margin: 160px  60px 40px 60px;
     }
 
     .read-more {
@@ -241,9 +240,14 @@ const { title } = Astro.props;
       margin: 20px;
     }
 
+   
+    .container23 {
+  display: flex;
+  flex-direction: row;
+}
+    }
+
     .second_third_nyhed {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
 
@@ -256,18 +260,22 @@ const { title } = Astro.props;
 
     .previous_nyheder {
       grid-column: span 2;
+      grid-row: 4;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 50px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
       place-items: center;
-      margin: 20px;
+      margin: 0px;
+      width: fit-content;
     }
 
-    .previous_nyheder .previous_box {
+    .previous_box {
       background-color: rgba(255, 255, 255, 0.8);
       box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
       margin: 20px;
-      padding: 20px;
+      padding: 10px;
+      max-width: 100%;
+    
     }
 
     .nyheder_box_info img {
@@ -294,14 +302,12 @@ const { title } = Astro.props;
       openPopup("overlay1");
     });
 
-    
     document
       .querySelector(".second_third_nyhed .read-more")
       .addEventListener("click", function () {
         openPopup("overlay2");
       });
 
-    
     window.addEventListener("click", function (event) {
       if (event.target === document.getElementById("overlay1")) {
         closePopup("overlay1");
