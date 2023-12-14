@@ -1,19 +1,17 @@
 ---
 const {data} = Astro.props;
-const {board_member_name, board_member_title, board_member_date, board_member_info1, board_member_info2, board_member_info3, board_member_info4, board_member_responsibilities, img_url} = Astro.props;
+const {coach_image_url, coach_name, coach_date, coach_info1, coach_info2, coach_info3, coach_info4} = Astro.props;
 ---
 
 <article class="bestyrelse_card">
-    <img src=`/imgs/bestyrelse_imgs/${img_url}` alt="Bestyrelses medlem" loading="lazy">
+    <img src=`/imgs/coach_imgs/${coach_image_url}` alt="Bestyrelses medlem" loading="lazy">
     <div>
-      <h2>{board_member_name}</h2>
-      <h3>{board_member_title}</h3>
-      <h4>{board_member_date}</h4>
-      <p>{board_member_info1}</p>
-      <p>{board_member_info2}</p>
-      <p>{board_member_info3}</p>
-      <p>{board_member_info4}</p>
-      <p>{board_member_responsibilities}</p>
+      <h2>{coach_name}</h2>
+      <h4>{coach_date}</h4>
+      <p>{coach_info1}</p>
+      <p>{coach_info2}</p>
+      <p>{coach_info3}</p>
+      <p>{coach_info4}</p>
     </div>
 </article>
 
@@ -40,7 +38,7 @@ const {board_member_name, board_member_title, board_member_date, board_member_in
 .bestyrelse_card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   min-width: 400px;
   max-width: 400px;
@@ -61,13 +59,13 @@ const {board_member_name, board_member_title, board_member_date, board_member_in
   @media screen and (min-width: 768px) {
     /* Styles for tablets and desktop */
 
-    h2, h3, h4 {
-      max-width: 375px;
-        min-width: 375px;
-    }
-
     div {
         max-width: 375px;
+    }
+
+    h2, h3, h4 {
+      max-width: 375px;
+      min-width: 375px;
     }
 
     .bestyrelse_card {
@@ -78,8 +76,7 @@ const {board_member_name, board_member_title, board_member_date, board_member_in
     }
 
     p{
-        max-width: 375px;
-        min-width: 375px;
+        max-width: 300px;
     }
 
 }

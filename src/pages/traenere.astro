@@ -1,7 +1,24 @@
 ---
+import BestyrelseCard from "../components/BestyrelseCard.astro";
 import Navbar from "../components/Navbar.astro";
+import TraenerCard from "../components/TraenerCard.astro";
 const { title } = Astro.props;
+const data = await fetch(
+  "https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/valby_if_coaches",
+  {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU"
+    },
+  }
+).then((res) => res.json());
+
+console.log(data);
 ---
+
+          
+     
+          
 
 <!doctype html>
 <html lang="en">
@@ -20,10 +37,60 @@ const { title } = Astro.props;
     <header><Navbar /></header>
 
     <main>
-    <p>HEEEEEEJ kan du se dette???????</p>
-    <p>hvaD MED DETTETE</p>
+      <h1>Bestyrelsen</h1>
+
+      <section>
+        {data.map((show) => {
+          return <TraenerCard coach_image_url={show.coach_image_url} coach_name={show.coach_name} coach_date={show.coach_date} coach_info1={show.coach_info1} coach_info2={show.coach_info2} coach_info3={show.coach_info3} coach_info4={show.coach_info4} >
+        </TraenerCard>;
+        })}
+      </section>
     </main>
 
     <footer></footer>
   </body>
 </html>
+
+<style>
+main {
+  margin-top: 160px;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #dededf;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    /* Styles for tablets and desktop */
+
+    .bestyrelse_card {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    }
+
+    img{
+        width: 400px;
+        align-items: center;
+    }
+
+    p{
+        max-width: 300px;
+    }
+
+}
+</style>
