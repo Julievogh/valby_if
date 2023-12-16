@@ -8,31 +8,41 @@
       <p class="stor_tekst">tilmelding til sæson 2023-2024</p>
       <div class="line"></div>
       <div class="buttons">
-        <button class="hold_button">Hold</button>
-        <button class="tilmeld_button">Tilmeld</button>
+        <button class="hold_button"> <a href="./hold">Hold</a></button>
+        <button class="tilmeld_button"
+          ><a href="./tilmelding">Tilmeld</a></button
+        >
       </div>
     </div>
   </div>
 </div>
 
-
-
 <style>
- 
- .circle {
-  width: 240px;
-  height: 240px;
-  background-color: #395d94;
-  border-radius: 50%;
-  padding: 20px;
-  transition: all 0.3s ease-in-out;
-}
+  .circle {
+    width: 240px;
+    height: 240px;
+    background-color: #395d94;
+    border-radius: 50%;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+  }
 
-.circle:hover {
-  transform: scale(1.05); 
-}
+  .circle:hover {
+    transform: scale(1.05);
+  }
 
-  
+  button {
+    text-decoration: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    transition: 0.3s;
+    color: #395d94;
+    text-decoration: none;
+  }
   .circle_container1 {
     position: absolute;
     top: 42%;
@@ -96,11 +106,9 @@
     cursor: pointer;
   }
 
-   @media only screen and (max-width: 900px) {
-   .circle_container1 {
-    display: none;
+  @media only screen and (max-width: 900px) {
+    .circle_container1 {
+      display: none;
+    }
   }
-
- 
-}
 </style>
