@@ -1,0 +1,52 @@
+<div class="scrolling-box">
+    <p>Events</p>
+    <p>Nytårsshow 29/12</p>
+     <p>Januar dans 12/01</p>
+      <p>Superdrenge 24/01</p>
+     <p><a href="./kalender">Se kalender</a></p>
+  </div>
+
+
+<style>
+  .scrolling-box {
+  
+  position: fixed;
+  top: 50%;
+  left: 0px; 
+  transform: translateY(60%);
+  background-color: rgba(82, 87, 99, 0.8); 
+  padding: 10px;
+  border-radius: 0 10px 10px 0; 
+  z-index: 2000;
+}
+
+.scrolling-box p:first-child {
+  color: #0E1D52;
+  font-size: 1.4rem;
+  font-family: PoetsenOne;
+
+}
+
+.scrolling-box p {
+  color: aliceblue;
+  font-size: 1.2rem;
+padding: 8px;
+}
+
+.scrolling-box a {
+  text-decoration: none;
+  color: #FD7D20; 
+}
+
+.scrolling-box a:hover {
+  text-decoration: none;
+  color: #6AA0DF; 
+  transition: 0.5s;
+}
+
+
+ @media only screen and (max-width: 900px) {
+ .scrolling-box {
+  display: none;
+ }
+</style>
