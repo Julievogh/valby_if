@@ -1,6 +1,9 @@
 ---
 import Navbar from "../components/Navbar.astro";
+
 import Footer from "../components/Footer.astro";
+import Farvev from "../components/Farvev.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -17,303 +20,288 @@ const { title } = Astro.props;
     <link rel="stylesheet" href="./src/css/generel.css" />
     <link rel="stylesheet" href="/src/css/index.css" />
   </head>
+
   <body>
     <header><Navbar /></header>
 
     <main>
-      <div class="nyheder_container first_nyhed">
-        <div class="nyheder_box_info">
-          <img src="/imgs/nyhed1.png" alt="" />
-          <div class="text">
-            <h3>Nyhed nr 1</h3>
-            <p>
-              Lidt info og mange spændende ting om ting og sager<span
-                class="read-more">Læs mere</span
-              >
-            </p>
+      <section class="nyheder">
+        <h2>Nyheder</h2>
+        <div class="nyheder_container">
+          <div class="nyheder_box1">
+            <img src="/imgs/nyhed1.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
+            <a href="">Læs mere</a>
           </div>
-        </div>
-      </div>
-
-      <div class="overlay" id="overlay1">
-        <div class="popup">
-          <span class="close" onclick="closePopup()">&times;</span>
-          <p>Så er vi næsten klar til at åbne for den kommende sæsons tilmeldinger, sæson 2023/24.
-Vi anbefaler at man læser holdbeskrivelserne godt igennem inden man melder sit barn til et børnehold. Der er sat en aldersgrænse af en grund for at få den bedste fordeling af børnene.
-
-Det kan være rigtig godt ikke altid at være den ”yngste” på et hold, også selv om man er motorisk dygtig. Der er meget at lære ved at være ”den store” og der vil stadig være gymnastiske udfordringer på holdet, det sørger vores instruktører for.
-
-Vi anbefaler også, at man læser vejledningen til tilmeldingen godt igennem, så man ved hvad man skal.
-
-Man vil opdage, at der allerede er reserveret pladser på vores hold, inden tilmeldingen åbner. Disse pladser er bl.a. reserveret til børn/unge i social udsatte positioner, til børn af frivillige bestyrelsesmedlemmer, hjælpetrænere i foreningen og børn af instruktører i foreningen.
-
-Vi sidder klar ved telefonerne på tilmeldingsaftnerne og ringer ud - skriv blot til bestyrelsesmailen med jeres telefonnummer, hvis noget driller.
-
-Husk endelig at skrive jer på ventelisten, hvis det kommer dertil. Systemet tæller hvert klik og reserverer derfra pladsen i 10 min. Hvis en bruger klikker 2 gange via 2 forskellige browsere, systemreserveres begge "klik". Derfor kan man havne på ventelisten i en overgang og inden for kort tid få tilbudt pladsen.
-
-Hold derfor også godt øje med jeres mail og sms i de følgende 18 timer. Alle der får plads fra ventelisten har 18 timer til at bekræfte denne plads og betale, efter de 18 timer går tilbudt plads videre til den næste på listen og man mister den tilbudte plads. Dette sker automatisk.
-
-Som I kan se har vi måtte ændre lidt i aldersfordelingen på holdene i år, så vi har plads til flest mulige børn. Dette da vi har et meget stort pres med mange 10-11 årige piger. Derfor har vi også oprettet et helt nyt hold 9-11 år, Torsdags Tornadoerne.
-
-Hvis jeres barn havner på ventelisten på et børnehold, vil vi se om vi kan finde alternative tilbud til jer og sende jer en besked vedr. dette.
-
-Vi glæder os til at sæsonen skal I gang og til at se gymnasterne og jer ude i hallerne
-
-
-De bedste hilsner
-Bestyrelsen, Valby IF-Gymnastik</p>
-        </div>
-      </div>
-
-      <div class="container23">
-        <div class="nyheder_container second_third_nyhed">
-          <div class="nyheder_box_info">
+          <div class="nyheder_box1 box_hide">
             <img src="/imgs/nyhed2.png" alt="" />
-            <div class="text">
-              <h3>Nyhed nr 2</h3>
-              <p>
-                Blabla kloge ord står her - jubii <span class="read-more"
-                  >Læs mere</span
-                >
-              </p>
-            </div>
+            <h5>Information vedrørende tilmeldinger</h5>
+            <a href="">Læs mere</a>
           </div>
-        </div>
-
-        <div class="overlay" id="overlay2">
-          <div class="popup">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <p>Her står nyheden - wauw</p>
-          </div>
-        </div>
-
-        <div class="nyheder_container second_third_nyhed nyheder">
-          <div class="nyheder_box_info">
+          <div class="nyheder_box1 box_hide">
             <img src="/imgs/nyhed3.png" alt="" />
-            <div class="text">
-              <h3>Nyhed nr 3</h3>
-              <p>
-                yuhsduifh hsjdfj <span class="read-more">Læs mere</span>
-              </p>
-            </div>
+            <h5>Information vedrørende tilmeldinger</h5>
+            <a href="">Læs mere</a>
           </div>
         </div>
-      </div>
-      <div class="overlay" id="overlay1">
-        <div class="popup">
-          <span class="close" onclick="closePopup('overlay1')">&times;</span>
-          <p>Her står nyheden - wauw</p>
+      </section>
+      <Farvev />
+      <section class="nyheder2">
+        <div class="tidligere_overskrift">
+          <button id="showNyhederBox2Button">
+            <h5>Tidligere nyheder</h5>
+          </button>
         </div>
-      </div>
+        <div class="line"></div>
 
-      <div class="overlay" id="overlay2">
-        <div class="popup">
-          <span class="close" onclick="closePopup('overlay2')">&times;</span>
-          <p>Her står nyheden - wauw</p>
-        </div>
-      </div>
-
-      <div class="overlay" id="overlay3">
-        <div class="popup">
-          <span class="close" onclick="closePopup('overlay3')">&times;</span>
-          <p>Her står nyheden - wauw</p>
-        </div>
-      </div>
-
-      <div class="previous_container">
-        <div class="previous_nyheder nyheder_box_info">
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-<img src="/imgs/nyhed2.png" alt="" />
+        <div class="nyheder_container2 box_hide2">
+          <div class="nyheder_box2">
+            <img src="/imgs/nyhed1.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
             <a href="">Læs mere</a>
           </div>
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-<img src="/imgs/nyhed1.png" alt="" />
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed2.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
             <a href="">Læs mere</a>
           </div>
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-<img src="/imgs/nyhed2.png" alt="" />
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed3.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
             <a href="">Læs mere</a>
           </div>
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-<img src="/imgs/nyhed1.png" alt="" />
+          <div class="nyheder_box2">
+            <img src="/imgs/nyhed1.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
             <a href="">Læs mere</a>
           </div>
-        </div>
-
-        <div class="previous_nyheder nyheder_box_info">
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-<img src="/imgs/nyhed3.png" alt="" />
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed2.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
             <a href="">Læs mere</a>
           </div>
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-<img src="/imgs/nyhed1.png" alt="" />
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed3.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
             <a href="">Læs mere</a>
           </div>
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-<img src="/imgs/nyhed2.png" alt="" />
+          <div class="nyheder_box2">
+            <img src="/imgs/nyhed1.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
             <a href="">Læs mere</a>
           </div>
-          <div class="previous_box">
-            <img src="" alt="" />
-            <h5>Nyhed nr 3</h5>
-<img src="/imgs/nyhed3.png" alt="" />
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed2.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
+            <a href="">Læs mere</a>
+          </div>
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed3.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
+            <a href="">Læs mere</a>
+          </div>
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed2.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
+            <a href="">Læs mere</a>
+          </div>
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed3.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
+            <a href="">Læs mere</a>
+          </div>
+          <div class="nyheder_box2 box_hide">
+            <img src="/imgs/nyhed3.png" alt="" />
+            <h5>Information vedrørende tilmeldinger</h5>
             <a href="">Læs mere</a>
           </div>
         </div>
-
-      
+      </section>
     </main>
-
     <footer>
       <Footer />
     </footer>
   </body>
-
-  <style>
-    main {
-     
-      margin: 160px  60px 40px 60px;
-    }
-
-    .read-more {
-      color: blue;
-      cursor: pointer;
-    }
-
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    .popup {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 20px;
-      color: #333;
-      cursor: pointer;
-    }
-    .nyheder_container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .first_nyhed {
-      grid-column: span 2;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-      margin: 20px;
-    }
-
-   
-    .container23 {
-  display: flex;
-  flex-direction: row;
-}
-    }
-
-    .second_third_nyhed {
-      gap: 20px;
-    }
-
-    .second_third_nyhed .nyheder_box_info {
-      background-color: rgba(255, 255, 255, 0.8);
-      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-      margin: 20px;
-      padding: 20px;
-    }
-
-    .previous_nyheder {
-      grid-column: span 2;
-      grid-row: 4;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      place-items: center;
-      margin: 0px;
-      width: fit-content;
-    }
-
-    .previous_box {
-      background-color: rgba(255, 255, 255, 0.8);
-      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-      margin: 20px;
-      padding: 10px;
-      max-width: 100%;
-    
-    }
-
-    .nyheder_box_info img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .first_nyhed .nyheder_box_info {
-      display: flex;
-      flex-direction: row;
-    }
-  </style>
-
-  <script>
-    function openPopup(overlayId) {
-      document.getElementById(overlayId).style.display = "block";
-    }
-
-    function closePopup(overlayId) {
-      document.getElementById(overlayId).style.display = "none";
-    }
-
-    document.querySelector(".read-more").addEventListener("click", function () {
-      openPopup("overlay1");
-    });
-
-    document
-      .querySelector(".second_third_nyhed .read-more")
-      .addEventListener("click", function () {
-        openPopup("overlay2");
-      });
-
-    window.addEventListener("click", function (event) {
-      if (event.target === document.getElementById("overlay1")) {
-        closePopup("overlay1");
-      } else if (event.target === document.getElementById("overlay2")) {
-        closePopup("overlay2");
-      }
-    });
-  </script>
 </html>
+<style>
+  main {
+    margin-top: 160px;
+  }
+
+  .line {
+    width: 200px;
+    height: 4px;
+    background-color: #0e1d52;
+    margin: 20px 0;
+  }
+
+  .nyheder,
+  .nyheder2 {
+    margin: 60px auto 0px auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nyheder h2 {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  .nyheder_container,
+  .nyheder2 .nyheder_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+
+  .nyheder_container2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .nyheder_box1 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .nyheder_box2 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: calc(25% - 40px);
+    flex: 1;
+  }
+
+  .nyheder_box1 h5,
+  .nyheder_box2 h5,
+  .nyheder_box1 a,
+  .nyheder_box2 a {
+    margin: 10px 0px 0 0px;
+  }
+
+  .nyheder_box1 img {
+    max-width: 100%;
+  }
+
+  .nyheder_2_box {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  .flere_nyheder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+  }
+
+  .flere_nyheder h5 {
+    color: #6aa0df;
+    font-size: 24px;
+  }
+
+  .flere_nyheder a {
+    font-family: "Almarai_reg", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .nyheder_box2 a,
+  .nyheder_box1 a {
+    font-family: "Almarai_reg", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    align-self: center;
+  }
+
+  a:hover {
+    transition: 0.3s;
+    color: #fd7d20;
+  }
+
+  .tidligere_overskrift {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .box_hide2 {
+    display: none;
+  }
+
+  button {
+    padding: 6px 14px;
+    background-color: #fd7d20;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  h5:hover {
+    color: white;
+    transition: 0.8s;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .nyheder_box2 {
+      width: calc(33.33% - 40px);
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .nyheder_container {
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nyheder_container2 {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .nyheder_box2 {
+      width: calc(50% - 60px);
+      flex: 0 0 auto;
+      margin: 4px;
+    }
+
+    .flere_nyheder {
+      margin-bottom: -20px;
+    }
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const showNyhederBox2Button = document.getElementById(
+      "showNyhederBox2Button"
+    );
+    const nyhederContainer2 = document.querySelector(".nyheder_container2");
+
+    showNyhederBox2Button.addEventListener("click", function () {
+      nyhederContainer2.classList.toggle("box_hide2");
+    });
+  });
+</script>
