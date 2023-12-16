@@ -1,54 +1,69 @@
 ---
-const {board_member_name, board_member_title, board_member_date, board_member_info1, board_member_info2, board_member_info3, board_member_info4, board_member_responsibilities, img_url} = Astro.props;
+const {
+  board_member_name,
+  board_member_title,
+  board_member_date,
+  board_member_info1,
+  board_member_info2,
+  board_member_info3,
+  board_member_info4,
+  board_member_responsibilities,
+  img_url,
+} = Astro.props;
 ---
 
 <article class="bestyrelse_card">
-    <img src=`/imgs/bestyrelse_imgs/${img_url}` alt="Bestyrelses medlem" loading="lazy">
-    <div>
-      <h2>{board_member_name}</h2>
-      <h3>{board_member_title}</h3>
-      <h4>{board_member_date}</h4>
-      <p>{board_member_info1}</p>
-      <p>{board_member_info2}</p>
-      <p>{board_member_info3}</p>
-      <p>{board_member_info4}</p>
-      <p>{board_member_responsibilities}</p>
-    </div>
+  <img
+    src=`/imgs/bestyrelse_imgs/${img_url}`
+    alt="Bestyrelses medlem"
+    loading="lazy"
+  />
+  <div>
+    <h2>{board_member_name}</h2>
+    <h3>{board_member_title}</h3>
+    <h4>{board_member_date}</h4>
+    <p>{board_member_info1}</p>
+    <p>{board_member_info2}</p>
+    <p>{board_member_info3}</p>
+    <p>{board_member_info4}</p>
+    <p>{board_member_responsibilities}</p>
+  </div>
 </article>
 
 <style>
-    h2, h3{
-        text-align: center;
-    }
+  h2,
+  h3 {
+    text-align: center;
+  }
 
-    img {
+  img {
     width: 200px;
     height: auto;
-    margin: 0 auto; 
+    margin: 0 auto;
     display: block;
-}
+  }
 
-    h4 {
+  h4 {
     font-family: "PoetsenOne", sans-serif;
     font-size: 18px;
     color: #252424;
     font-weight: 400;
     text-align: center;
-}
+  }
 
-.bestyrelse_card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 400px;
-  max-width: 400px;
-  background-color: #f6f6f7;
-  padding: 15px;
-  border-radius: 14px;
-  margin: 10px;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-}
+  .bestyrelse_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    max-width: 400px;
+    background-color: #f6f6f7;
+    padding: 15px;
+    border-radius: 14px;
+    margin: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
   p {
     color: #252424;
@@ -60,27 +75,27 @@ const {board_member_name, board_member_title, board_member_date, board_member_in
   @media screen and (min-width: 768px) {
     /* Styles for tablets and desktop */
 
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
       max-width: 375px;
-        min-width: 375px;
+      min-width: 375px;
     }
 
     div {
-        max-width: 375px;
+      max-width: 375px;
     }
 
     .bestyrelse_card {
-    display: flex;
-    flex-direction: row;
-    max-width: 750px;
-    min-width: 750px;
+      display: flex;
+      flex-direction: row;
+      max-width: 750px;
+      min-width: 750px;
     }
 
-    p{
-        max-width: 375px;
-        min-width: 375px;
+    p {
+      max-width: 375px;
+      min-width: 375px;
     }
-
-}
-
+  }
 </style>
