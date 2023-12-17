@@ -4,9 +4,10 @@ import GalleriComponent from "../components/GalleriComponent.astro";
 const getValbyIfGallery = await fetch(
   "https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/valby_if_gallery",
   {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU"
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU",
     },
   }
 ).then((res) => res.json());
@@ -27,58 +28,69 @@ const getValbyIfGallery = await fetch(
   </head>
   <body>
     <header>
-    <Navbar />
+      <Navbar />
     </header>
 
     <main>
       <div class="container">
         <h1>Galleri</h1>
-    
+
         <h2>Videoer</h2>
-    
+
         <div class="video-container">
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/joW-nj-cg64" frameborder="0" allowfullscreen></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/joW-nj-cg64"
+              frameborder="0"
+              allowfullscreen></iframe>
           </div>
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/Oqrr-LuSjbs" frameborder="0" allowfullscreen></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/Oqrr-LuSjbs"
+              frameborder="0"
+              allowfullscreen></iframe>
           </div>
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/Sygec2Ri1MU" frameborder="0" allowfullscreen></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/Sygec2Ri1MU"
+              frameborder="0"
+              allowfullscreen></iframe>
           </div>
         </div>
-    
+
         <h2>Billeder</h2>
-        
+
         <div class="image-container">
-          {getValbyIfGallery.map((data) => {
-          return <GalleriComponent
-          img_url = {data.img_url}>
-          </GalleriComponent>
-        })};
+          {
+            getValbyIfGallery.map((data) => {
+              return (
+                <GalleriComponent img_url={data.img_url}></GalleriComponent>
+              );
+            })
+          };
         </div>
         <div class="popup-image">
           <span>&times;</span>
-          <img src="#" alt="Gallery image">
+          <img src="#" alt="Gallery image" />
         </div>
-      </div>  
+      </div>
     </main>
 
     <footer></footer>
   </body>
-  
 </html>
 
 <script>
-  document.querySelectorAll('.image-container img').forEach(image => {
-    image.addEventListener('click', () => {
-      console.log("click")
-    document.querySelector('.popup-image').style.display = 'block';
-    document.querySelector('.popup-image img').src = image.getAttribute('src');
+  document.querySelectorAll(".image-container img").forEach((image) => {
+    image.addEventListener("click", () => {
+      console.log("click");
+      document.querySelector(".popup-image").style.display = "block";
+      document.querySelector(".popup-image img").src =
+        image.getAttribute("src");
     });
   });
- 
-  document.querySelector('.popup-image span').addEventListener('click', () => {
-    document.querySelector('.popup-image').style.display = 'none';
+
+  document.querySelector(".popup-image span").addEventListener("click", () => {
+    document.querySelector(".popup-image").style.display = "none";
   });
 </script>

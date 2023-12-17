@@ -1,52 +1,65 @@
 ---
-const {coach_image_url, coach_name, coach_date, coach_info1, coach_info2, coach_info3, coach_info4} = Astro.props;
+const {
+  coach_image_url,
+  coach_name,
+  coach_date,
+  coach_info1,
+  coach_info2,
+  coach_info3,
+  coach_info4,
+} = Astro.props;
 ---
 
 <article class="bestyrelse_card">
-    <img src=`/imgs/coach_imgs/${coach_image_url}` alt="Bestyrelses medlem" loading="lazy">
-    <div>
-      <h2>{coach_name}</h2>
-      <h4>{coach_date}</h4>
-      <p>{coach_info1}</p>
-      <p>{coach_info2}</p>
-      <p>{coach_info3}</p>
-      <p>{coach_info4}</p>
-    </div>
+  <img
+    src=`/imgs/coach_imgs/${coach_image_url}`
+    alt="Bestyrelses medlem"
+    loading="lazy"
+  />
+  <div>
+    <h2>{coach_name}</h2>
+    <h4>{coach_date}</h4>
+    <p>{coach_info1}</p>
+    <p>{coach_info2}</p>
+    <p>{coach_info3}</p>
+    <p>{coach_info4}</p>
+  </div>
 </article>
 
 <style>
-    h2, h3{
-        text-align: center;
-    }
+  h2,
+  h3 {
+    text-align: center;
+  }
 
-    img {
+  img {
     width: 200px;
     height: auto;
-    margin: 0 auto; 
+    margin: 0 auto;
     display: block;
-}
+  }
 
-    h4 {
+  h4 {
     font-family: "PoetsenOne", sans-serif;
     font-size: 18px;
     color: #252424;
     font-weight: 400;
     text-align: center;
-}
+  }
 
-.bestyrelse_card {
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  min-width: 400px;
-  max-width: 400px;
-  background-color: #f6f6f7;
-  padding: 15px;
-  border-radius: 14px;
-  margin: 10px;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-}
+  .bestyrelse_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    max-width: 400px;
+    background-color: #f6f6f7;
+    padding: 15px;
+    border-radius: 14px;
+    margin: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
   p {
     color: #252424;
@@ -59,25 +72,25 @@ const {coach_image_url, coach_name, coach_date, coach_info1, coach_info2, coach_
     /* Styles for tablets and desktop */
 
     div {
-        max-width: 375px;
+      max-width: 375px;
     }
 
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
       max-width: 375px;
       min-width: 375px;
     }
 
     .bestyrelse_card {
-    display: flex;
-    flex-direction: row;
-    max-width: 750px;
-    min-width: 750px;
+      display: flex;
+      flex-direction: row;
+      max-width: 750px;
+      min-width: 750px;
     }
 
-    p{
-        max-width: 300px;
+    p {
+      max-width: 300px;
     }
-
-}
-
+  }
 </style>
