@@ -1,0 +1,308 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+    const data = await fetch("https://tqtbpbbdzsjfhojxiboh.supabase.co/rest/v1/Valbyhold",
+    {
+	method: "GET",
+	headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRxdGJwYmJkenNqZmhvanhpYm9oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDI0NzI5NjAsImV4cCI6MjAxODA0ODk2MH0.GoHfKbDBs8vhjkVUEa2-ZInZhXK4V5b_olcyC_Aiods"
+	},
+}
+    
+    ).then(response => response.json());
+
+    return data.map((show) => {
+        return {
+            params: { slug:show.slug },
+            props: { myData:show },
+        };
+    });
+}
+
+const { myData } = Astro.props;
+console.log(myData);
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Valby IF</title>
+    <link rel="stylesheet" href="./src/css/generel.css" />
+    <link rel="stylesheet" href="/src/css/index.css" />
+    
+   
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <header>
+      <Navbar />
+   
+    </header>
+    <main>
+<section class="h1">
+
+
+    <div class="tekst">
+  <h1>{myData.Holdnavn}</h1>
+  
+</div>
+</section>
+   
+<section class="event">
+  
+    <div class="container">
+        <img src=`/imgs/Holdkortb/${myData.img}` alt="">
+        
+       
+       
+    
+       	<div class="ensemble">
+                <div class="dage">
+                  <p> <i class='bx bx-user'></i><span> Antal tilmeldte: </span>{myData.Tilmeldte}</p>
+                     <p><i class='bx bx-time' ></i><span> Venteliste: </span>{myData.Venteliste}</p>
+                     <p><i class='bx bx-calendar-alt' ></i><span> Årgang: </span>{myData.Aargang}</p>
+                  <p><i class='bx bx-credit-card' ></i><span> Pris: </span>{myData.Pris}</p>
+                  </div>
+
+                
+                
+        </div>
+        	<div class="ensemble">
+                <div class="dage">
+                    <p class="dato"><i class='bx bxs-calendar'></i> {myData.dato}</p>
+                  <p> <i class='bx bxs-map'></i> <span>{myData.Sted}</span></p>
+                   
+                    <p>{myData.Tid1}</p>
+                  <p>{myData.tid1}</p>
+                  </div>
+
+                  <div class="instruktør">
+                  <p class="instruktør"><i class='bx bxs-user' ></i><span> Instruktører</span></p>
+                  <p class="flex">{myData.Instruktør1}</p>
+                  <p>{myData.Instruktør2}</p>
+                  <p>{myData.Instruktør3}</p>
+                  <p>{myData.Instruktør4}</p>
+                  
+                </div>
+                
+        </div>
+         
+                  
+    </div>
+  
+
+
+
+   
+
+   </section>
+
+   <section class="beskrivelse">
+    
+    <h1>Holdbeskrivelse:</h1>
+
+    <p class="holdbeskrivelse">
+       {myData.Holdbeskrivelse}
+    </p>
+  
+    </section>
+
+    <section class="tilmeld">
+         <h1>Pris: {myData.Pris}</h1>
+         <hr>
+         <div class="knapper">
+            <a href="./info" class="btn-wrapper">
+  Jeg har ingen profil - Opret og tilmeld
+</a>
+<a href="./info" class="btn-wrapper">
+  Jeg har en profil - Login og tilmeld
+</a>
+         </div>
+         <div>
+         <h1>Instruktører</h1>
+         <div class="billede">
+            <img src="../public/imgs/faceuser.png" alt="">
+           <img src="../public/imgs/faceuser.png" alt="">
+           <img src="../public/imgs/faceuser.png" alt="">
+         </div>
+         </div>
+    </section>
+    </main>
+
+    <footer>
+        <Footer />
+    </footer>
+  </body>
+</html>
+
+<style>
+
+    .billede {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    padding: 25px;
+}
+
+.billede img {
+    width: calc(60% / 3); /* Divide the container width by the number of images */
+    max-width: 100%; /* Ensure images don't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.345);
+}
+
+
+    
+    .btn-wrapper {
+  display: flex;
+    justify-content: center;
+    width: 35%;
+    padding: 7px;
+    
+    height: auto;
+    background: #067ab0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+     margin-bottom: 8px;
+  
+}
+
+.btn-wrapper:hover {
+    transform: scale(1.01);
+}
+
+
+a {
+    cursor:pointer;
+    text-decoration: none;
+  
+}
+
+.knapper {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    gap: 10px;
+}
+
+
+    .ensemble {
+        display: flex;
+        flex-direction: column;
+        text-align:inherit;
+       
+    }
+    .container img {
+        width: 30vw;
+        height: auto;
+       
+    }
+    i {
+        color: rgb(18, 130, 190);
+    }
+
+     .event {
+    
+    min-height: 30vh;
+    padding: 2.5rem 9%  0;
+    justify-content: left;
+
+
+  }
+
+  .holdbeskrivelse {
+    font-size: 1.2rem;
+    line-height: 1.35;
+  }
+
+  .beskrivelse {
+    padding: 1.5rem 9% 0;
+  }
+
+  section.tilmeld {
+     padding: 0.7rem 9% 1rem;
+  }
+
+  .container {
+    display: flex;
+    gap: 4em;
+   
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: rgb(57, 57, 57);
+  }
+
+  span {
+    color: black;
+  
+  }
+
+   main {
+      padding-top: 2rem;
+    }
+
+  .tekst {
+    display: grid;
+    gap: 5px; /* Removes the gap between grid items */
+  }
+
+  .tekst h1 {
+    font-size: 3.5rem;
+    color: black;
+    margin-bottom: 0; /* Removes the default bottom margin */
+  }
+
+   section.h1 {
+    padding: 10% 10.5% 0 ;
+    margin-bottom: 0;
+  }
+
+  @media (max-width:699px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1em;
+    }
+
+    .container img {
+      width: 100%;
+    }
+
+    .tekst h1 {
+      font-size: 2rem;
+    }
+
+    .btn-wrapper {
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    main {
+      padding-top: 8rem;
+    }
+
+  }
+
+
+
+  
+</style>
