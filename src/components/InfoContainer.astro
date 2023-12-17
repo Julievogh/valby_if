@@ -1,14 +1,16 @@
 <section class="info_container">
   <h2>Info om Valby IF og Gymnastik</h2>
   <div class="infovideo_container">
-    <img
-      class="triangle_background"
-      src="/imgs/lightblue_triangle.svg"
-      alt=""
-    />
-    <video controls class="infovideo">
-      <source src="/imgs/test_infovideo.mov" type="video/mp4" />
-    </video>
+    <img class="triangle_background" src="/imgs/lightblue_triangle.svg" alt="" />
+    <div class="infovideo">
+      <iframe
+        src="https://www.youtube.com/embed/joW-nj-cg64?si=7nQI0-VHXhhcQebA"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
 </section>
 
@@ -20,57 +22,66 @@
     align-items: center;
     position: relative;
     text-align: center;
-    
-    
+    height: 100vh;
   }
 
   .info_container h2 {
     margin: -10px;
-   
   }
 
   .infovideo_container {
     position: relative;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
 
   .triangle_background {
-   position: absolute;
-    justify-self: center;
-    align-self: center;
+    position: absolute;
     top: -100px;
     left: 0;
     width: 100%;
     height: auto;
-    z-index: -1; 
+    z-index: -1;
   }
 
-  .infovideo {
-     width: 100%;
-    padding: 80px 300px 0 300px;
+ .infovideo {
+    width: 100%;
+    max-width: 860px; 
+    margin: 0 auto;
+    position: relative;
     z-index: 1;
+    height: 500px; /* Set a fixed height for the video container */
+  }
+
+  .infovideo iframe {
+    width: 90%;
+    height: 100%; /* Set the height to 100% to fill the container */
   }
 
   @media only screen and (max-width: 900px) {
-    .info_container {
-      margin: 0;
-      padding: 0;
-    }
+  .info_container {
+    margin: 0;
+    padding: 0;
+  }
 
-     .info_container h2 {
+  .info_container h2 {
     margin: 30px;
-   
   }
 
-    .triangle_background {
-   
+  .triangle_background {
     top: 10px;
-    }
-    .infovideo {
-      padding: 0 40px;
-    }
   }
+
+  .infovideo {
+    padding: 0 20px; 
+    height: 300px; /
+  }
+  .infovideo iframe {
+    width: 80%;
+    height: 100%; 
+  }
+}
+
 </style>
