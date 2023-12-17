@@ -3,7 +3,6 @@ import Farvem from "../components/Farvem.astro";
 ---
 
 <section class="nyheder">
-  
   <h2>Nyheder</h2>
   <div class="line"></div>
   <div class="nyheder_container">
@@ -19,7 +18,7 @@ import Farvem from "../components/Farvem.astro";
     </div>
     <div class="nyheder_box2 box_hide">
       <img src="/imgs/galleri_imgs/nyhedforside3.webp" alt="" />
-      <h5>VIF generalforsamling </h5>
+      <h5>VIF generalforsamling</h5>
       <a href="">Læs mere</a>
     </div>
   </div>
@@ -33,23 +32,20 @@ import Farvem from "../components/Farvem.astro";
 </section>
 
 <style>
-
   .line {
     width: 200px;
     height: 4px;
     background-color: #0e1d52;
   }
   .nyheder {
-  margin: 60px auto 0px auto;
-  max-width: 1100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center;
-  text-align: center;
-}
-
-  
+    margin: 60px auto 0px auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
   .nyheder h2 {
     text-align: center;
@@ -66,19 +62,18 @@ import Farvem from "../components/Farvem.astro";
   }
 
   .nyheder_box2 {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1);
     gap: 20px;
     margin: 20px;
 
-   
     border-radius: 8px;
-  width: 20%;
-  flex: 1;
-}
+    width: 20%;
+    flex: 1;
+  }
 
   .nyheder_box1 h5,
   .nyheder_box2 h5,
@@ -135,21 +130,28 @@ import Farvem from "../components/Farvem.astro";
 
   @media only screen and (max-width: 900px) {
     .nyheder_container {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
 
-  .nyheder_box2 {
-     width: 100%;
-  }
+    .nyheder_box2 {
+      width: 100%;
+      width: 340px;
+    }
 
-  .box_hide {
-    display: none;
-  }
+    .nyheder_box2 img {
+      width: 300px;
+      align-self: center;
+      justify-self: center;
+    }
 
-  .flere_nyheder {
-    margin-bottom: -20px;
-  }
+    .box_hide {
+      display: none;
+    }
+
+    .flere_nyheder {
+      margin-bottom: -20px;
+    }
   }
 </style>
