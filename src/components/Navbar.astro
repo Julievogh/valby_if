@@ -8,7 +8,7 @@
     <a href="/"><img src="/imgs/valbyif_logo.svg" alt="Logo" class="logo" /></a>
     <ul class="menu">
       <li class="menu-item menu-item-omos">
-        <a href="./omos">OM OS</a>
+        <a href="/omos">OM OS</a>
         <ul class="dropdown">
           <li class="menu-item"><a href="/traenere">TRÆNERE</a></li>
           <li class="menu-item">
@@ -227,24 +227,24 @@
   }
 </style>
 <script>
- document.addEventListener("DOMContentLoaded", function () {
-  const mainHeader = document.getElementById("mainHeader");
-  const navbar = document.querySelector(".navbar") 
-  const navbar2 = document.querySelector(".navbar2") 
+  document.addEventListener("DOMContentLoaded", function () {
+    const mainHeader = document.getElementById("mainHeader");
+    const navbar = document.querySelector(".navbar");
+    const navbar2 = document.querySelector(".navbar2");
 
-  window.addEventListener("scroll", function () {
-    const scrollPosition =
-      window.scrollY || document.documentElement.scrollTop;
+    window.addEventListener("scroll", function () {
+      const scrollPosition =
+        window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollPosition > navbar.offsetHeight) {
-      navbar2.classList.add("fixed-navbar2");
-    } else {
-      navbar2.classList.remove("fixed-navbar2");
-    }
-  });
+      if (scrollPosition > navbar.offsetHeight) {
+        navbar2.classList.add("fixed-navbar2");
+      } else {
+        navbar2.classList.remove("fixed-navbar2");
+      }
+    });
 
     const omOsMenuItem = document.querySelector(".menu-item-omos");
-    const dropdown = document.querySelector(".dropdown") as HTMLElement; 
+    const dropdown = document.querySelector(".dropdown") as HTMLElement;
 
     if (omOsMenuItem && dropdown) {
       omOsMenuItem.addEventListener("mouseover", function () {
