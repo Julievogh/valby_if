@@ -1,5 +1,5 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import GalleriComponent from "../components/GalleriComponent.astro";
 const getValbyIfGallery = await fetch(
   "https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/valby_if_gallery",
@@ -12,25 +12,7 @@ const getValbyIfGallery = await fetch(
   }
 ).then((res) => res.json());
 ---
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta name="generator" content={Astro.generator} />
-
-    <title>Valby IF</title>
-    <link rel="stylesheet" href="./src/css/generel.css" />
-    <link rel="stylesheet" href="/src/css/index.css" />
-  </head>
-  <body>
-    <header>
-      <Navbar />
-    </header>
-
+<MainLayout>
     <main>
       <div class="container">
         <h1>Galleri</h1>
@@ -75,10 +57,7 @@ const getValbyIfGallery = await fetch(
         </div>
       </div>
     </main>
-
-    <footer></footer>
-  </body>
-</html>
+  </MainLayout>
 
 <script>
   document.querySelectorAll(".image-container img").forEach((image) => {
