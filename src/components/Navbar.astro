@@ -16,252 +16,255 @@
           </li>
           <li class="menu-item"><a href="/galleri">GALLERI</a></li>
           <li class="menu-item">
-            <a href="/kampagne">KAMPAGNE</a>
+            <a href="https://valbyif-kampagne.netlify.app/">KAMPAGNE</a>
           </li>
         </ul>
       </li>
-      
-    <li class="menu-item"><a href="/hold">HOLD</a></li>
-    <li class="menu-item">
-      <a href="/tilmelding"><span>TILMELD</span></a>
-    </li>
-  </div>
-</header>
 
-<div class="navbar2">
-  <a href="/"> <img src="/imgs/valbyif_logo.svg" alt="Logo" class="logo" /></a>
-  <div class="menu-toggle" id="mobile-menu">
-    <span></span>
-    <span></span>
-    <span></span>
+      <li class="menu-item"><a href="/hold">HOLD</a></li>
+      <li class="menu-item">
+        <a href="/tilmelding"><span>TILMELD</span></a>
+      </li>
+    </ul>
   </div>
 
-  <ul class="menu2">
-    <li class="menu-item"><a href="/">VELKOMMEN</a></li>
-    <li class="menu-item"><a href="/nyheder">NYHEDER</a></li>
-    <li class="menu-item"><a href="/kalender">KALENDER</a></li>
-    <li class="menu-item"><a href="/hold">HOLD</a></li>
+  <div class="navbar2">
+    <a href="/">
+      <img src="/imgs/valbyif_logo.svg" alt="Logo" class="logo" /></a
+    >
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-    <li class="menu-item">
-      <a href="/omos">OM OS</a>
+    <ul class="menu2">
+      <li class="menu-item"><a href="/">VELKOMMEN</a></li>
+      <li class="menu-item"><a href="/nyheder">NYHEDER</a></li>
+      <li class="menu-item"><a href="/kalender">KALENDER</a></li>
+      <li class="menu-item"><a href="/hold">HOLD</a></li>
 
-      <li class="menu-item"><a href="/traenere">TRÆNERE</a></li>
       <li class="menu-item">
-        <a href="/bestyrelsen">BESTYRELSEN</a>
+        <a href="/omos">OM OS</a>
+
+        <li class="menu-item"><a href="/traenere">TRÆNERE</a></li>
+        <li class="menu-item">
+          <a href="/bestyrelsen">BESTYRELSEN</a>
+        </li>
+        <li class="menu-item">
+          <a href="https://valbyif-kampagne.netlify.app/">KAMPAGNE</a>
+        </li>
+        <li class="menu-item"><a href="/galleri">GALLERI</a></li>
       </li>
+
       <li class="menu-item">
-        <a href="/kampagne">KAMPAGNE</a>
+        <a href="/tilmelding"><span>TILMELD</span></a>
       </li>
-      <li class="menu-item"><a href="/galleri">GALLERI</a></li>
-    </li>
+    </ul>
+  </div>
 
-    <li class="menu-item">
-      <a href="/tilmelding"><span>TILMELD</span></a>
-    </li>
-  </ul>
-</div>
-
-<style>
-  .navbar {
-    position: fixed;
-    top: 50px;
-    left: 30px;
-    right: 30px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 60px;
-    border-radius: 10px;
-    z-index: 999;
-  }
-
-  .logo-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  .logo {
-    width: 250px;
-    display: block;
-    margin-top: 0px;
-    margin-bottom: -45px;
-  }
-
-  .menu {
-    display: flex;
-
-    margin: 0;
-    padding: 0;
-  }
-
-  .menu-item {
-    margin: 0 0px;
-    padding: 0;
-  }
-
-  .navbar2 {
-    display: none;
-  }
-
-  @media screen and (max-width: 950px) {
-    .menu {
-      display: none;
-    }
-
+  <style>
     .navbar {
-      display: none;
-    }
-
-    .navbar2 {
       position: fixed;
       top: 50px;
       left: 30px;
       right: 30px;
       background-color: rgba(255, 255, 255, 0.8);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
       padding: 10px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       height: 60px;
+      border-radius: 10px;
       z-index: 999;
     }
 
-    .menu-toggle {
-      cursor: pointer;
-      margin-right: 15px;
+    .logo-container {
+      flex-grow: 1;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 25px;
+      justify-content: center;
     }
 
-    .menu-toggle span {
-      background-color: #0e1d52;
-      height: 3px;
-      width: 30px;
+    .logo {
+      width: 250px;
       display: block;
-      transition: background-color 0.3s;
+      margin-top: 0px;
+      margin-bottom: -45px;
     }
 
-    .menu-toggle:hover span {
-      background-color: #6aa0df;
-    }
-    .show {
-      display: block;
+    .menu {
+      display: flex;
+
+      margin: 0;
+      padding: 0;
     }
 
-    .menu2 {
+    .menu-item {
+      margin: 0 0px;
+      padding: 0;
+    }
+
+    .navbar2 {
       display: none;
     }
 
-    .menu2.show {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 65px;
-      right: 0;
-      width: 200px;
-      background-color: rgba(255, 255, 255, 0.8);
-      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 10px;
-      justify-content: flex-end;
-      align-items: flex-end;
-      height: auto;
+    @media screen and (max-width: 950px) {
+      .menu {
+        display: none;
+      }
+
+      .navbar {
+        display: none;
+      }
+
+      .navbar2 {
+        position: fixed;
+        top: 50px;
+        left: 30px;
+        right: 30px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        z-index: 999;
+      }
+
+      .menu-toggle {
+        cursor: pointer;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 25px;
+      }
+
+      .menu-toggle span {
+        background-color: #0e1d52;
+        height: 3px;
+        width: 30px;
+        display: block;
+        transition: background-color 0.3s;
+      }
+
+      .menu-toggle:hover span {
+        background-color: #6aa0df;
+      }
+      .show {
+        display: block;
+      }
+
+      .menu2 {
+        display: none;
+      }
+
+      .menu2.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: auto;
+      }
     }
-  }
 
-  .navbar,
-  .navbar2 {
-    font-family: "Almarai_reg", sans-serif;
-    font-size: 16px;
-    color: #0e1d52;
-  }
+    .navbar,
+    .navbar2 {
+      font-family: "Almarai_reg", sans-serif;
+      font-size: 16px;
+      color: #0e1d52;
+    }
 
-  a {
-    color: #0e1d52;
-    text-decoration: none;
-  }
+    a {
+      color: #0e1d52;
+      text-decoration: none;
+    }
 
-  a span {
-    font-weight: 800;
-  }
+    a span {
+      font-weight: 800;
+    }
 
-  ul {
-    list-style-type: none;
-  }
+    ul {
+      list-style-type: none;
+    }
 
-  ul li {
-    display: inline-block;
-    position: relative;
-  }
+    ul li {
+      display: inline-block;
+      position: relative;
+    }
 
-  ul li a {
-    display: block;
-    padding: 20px 25px;
-    text-decoration: none;
-    text-align: center;
-  }
+    ul li a {
+      display: block;
+      padding: 20px 25px;
+      text-decoration: none;
+      text-align: center;
+    }
 
-  ul li ul.dropdown {
-    width: 100%;
-    position: absolute;
-    z-index: 999;
-    display: none;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 200px;
-  }
+    ul li ul.dropdown {
+      width: 100%;
+      position: absolute;
+      z-index: 999;
+      display: none;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 200px;
+    }
 
-  ul li ul.dropdown li {
-    display: block;
-  }
+    ul li ul.dropdown li {
+      display: block;
+    }
 
-  a:hover {
-    transition: 0.3s;
-    color: #fd7d20;
-  }
-</style>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const mainHeader = document.getElementById("mainHeader");
-    const navbar = document.querySelector(".navbar");
-    const navbar2 = document.querySelector(".navbar2");
+    a:hover {
+      transition: 0.3s;
+      color: #fd7d20;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mainHeader = document.getElementById("mainHeader");
+      const navbar = document.querySelector(".navbar");
+      const navbar2 = document.querySelector(".navbar2");
 
-    window.addEventListener("scroll", function () {
-      const scrollPosition =
-        window.scrollY || document.documentElement.scrollTop;
+      window.addEventListener("scroll", function () {
+        const scrollPosition =
+          window.scrollY || document.documentElement.scrollTop;
 
-      if (scrollPosition > navbar.offsetHeight) {
-        navbar2.classList.add("fixed-navbar2");
-      } else {
-        navbar2.classList.remove("fixed-navbar2");
+        if (scrollPosition > navbar.offsetHeight) {
+          navbar2.classList.add("fixed-navbar2");
+        } else {
+          navbar2.classList.remove("fixed-navbar2");
+        }
+      });
+
+      const omOsMenuItem = document.querySelector(".menu-item-omos");
+      const dropdown = document.querySelector(".dropdown") as HTMLElement;
+
+      if (omOsMenuItem && dropdown) {
+        omOsMenuItem.addEventListener("mouseover", function () {
+          dropdown.style.display = "block";
+        });
+
+        omOsMenuItem.addEventListener("mouseout", function () {
+          dropdown.style.display = "none";
+        });
+      }
+
+      const mobileMenuToggle = document.getElementById("mobile-menu");
+      const menu2 = document.querySelector(".menu2");
+
+      if (mobileMenuToggle && menu2) {
+        mobileMenuToggle.addEventListener("click", function () {
+          menu2.classList.toggle("show");
+        });
       }
     });
-
-    const omOsMenuItem = document.querySelector(".menu-item-omos");
-    const dropdown = document.querySelector(".dropdown") as HTMLElement;
-
-    if (omOsMenuItem && dropdown) {
-      omOsMenuItem.addEventListener("mouseover", function () {
-        dropdown.style.display = "block";
-      });
-
-      omOsMenuItem.addEventListener("mouseout", function () {
-        dropdown.style.display = "none";
-      });
-    }
-
-    const mobileMenuToggle = document.getElementById("mobile-menu");
-    const menu2 = document.querySelector(".menu2");
-
-    if (mobileMenuToggle && menu2) {
-      mobileMenuToggle.addEventListener("click", function () {
-        menu2.classList.toggle("show");
-      });
-    }
-  });
-</script>
+  </script>
+</header>
