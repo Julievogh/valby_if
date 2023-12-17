@@ -5,21 +5,70 @@
 </div>
 
 <style>
+  
+  @font-face {
+  font-family: "PoetsenOne";
+  src: url("/fonts/PoetsenOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Almarai_reg";
+  src: url("/fonts/Almarai-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Almarai_bold";
+  src: url("/fonts/Almarai-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Light */
+@font-face {
+  font-family: "Almarai_light";
+  src: url("/fonts/Almarai-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: "Almarai_extra_bold";
+  src: url("/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AlfaSlabOne";
+  src: url("/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+  
   .tekst {
     display: grid;
-    gap: 5px; /* Removes the gap between grid items */
+    justify-content: center;
+    text-align: center;
+    gap: 0px; /* Removes the gap between grid items */
   }
 
   h1 {
-    font-size: 4.5rem;
-    color: black;
-    margin-bottom: 0; /* Removes the default bottom margin */
+    font-family: "PoetsenOne", sans-serif;
+  font-size: 50px;
+  color: #0e1d52;
   }
 
-  p {
-    font-size: 1.4rem; /* Added 'rem' unit */
-    color: black;
-    margin-top: 0; /* Removes the default top margin */
-  }
+p {
+  font-family: "Almarai_reg", sans-serif;
+  font-size: 25px;
+  color: #0e1d52;
+  margin-top: -30px;
+}
   
 </style>

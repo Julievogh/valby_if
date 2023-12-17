@@ -23,11 +23,13 @@ console.log(data);
     <link rel="icon" type="image/svg+xml" href="/favicon_valby.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
   <meta name="generator" content={Astro.generator} />
 
     <title>Valby IF</title>
    
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ 
   </head>
   <body>
     <header>
@@ -57,6 +59,51 @@ console.log(data);
 </html>
 
 <style>
+ @font-face {
+  font-family: "PoetsenOne";
+  src: url("/fonts/PoetsenOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Almarai_reg";
+  src: url("/fonts/Almarai-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Almarai_bold";
+  src: url("/fonts/Almarai-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Light */
+@font-face {
+  font-family: "Almarai_light";
+  src: url("/fonts/Almarai-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: "Almarai_extra_bold";
+  src: url("/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AlfaSlabOne";
+  src: url("/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+ 
  .event {
    
     min-height: 100vh;
@@ -69,7 +116,12 @@ console.log(data);
 }
 
 .heading {
-  font-size: 2.8rem;
+ 
+  font-family: "PoetsenOne", sans-serif;
+  font-size: 50px;
+  color: #0e1d52;
+
+  
   display: flex;
   justify-content: center;
   align-items: center;
