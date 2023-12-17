@@ -1,9 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Tilmeld from "../components/Tilmeld.astro";
-
-
-const { title } = Astro.props;
+import "../css/generel.css"
 ---
 
 <!doctype html>
@@ -16,8 +14,6 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
 
     <title>Valby IF</title>
-    <link rel="stylesheet" href="./src/css/generel.css" />
-    <link rel="stylesheet" href="/src/css/index.css" />
   </head>
   <body>
     <header><Navbar /></header>
