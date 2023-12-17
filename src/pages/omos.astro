@@ -18,6 +18,10 @@ import MainLayout from "../layouts/MainLayout.astro";
             <a href="./traenere">Trænere</a>
           </div>
         </article>
+
+        <div class="under_billede">
+          <img src="./imgs/gymnaster.webp" alt="">
+        </div>
       </section>
 
     </main>
@@ -29,9 +33,19 @@ import MainLayout from "../layouts/MainLayout.astro";
   section{
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
+
+
+  .under_billede img{
+max-width: 100%;
+width: 600px;
+
+  }
   .omos_container{
+    justify-self: center;
+    align-self: center;
     text-align: left;
     width: 600px;
     margin: 30px 0px 30px 0px;
