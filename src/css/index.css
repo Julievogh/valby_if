@@ -30,7 +30,7 @@ h3 span {
 
 .hero {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -62,7 +62,8 @@ h3 span {
 
 
   .hero {
-    height: 32vh;
+    height: 36vh;
+    width: auto;
   }
 
   .back_video {

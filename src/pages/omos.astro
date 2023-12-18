@@ -1,49 +1,72 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 ---
+
 <MainLayout>
-
-    <main>
-      <h1>Om os</h1>
-      <section>
-        <article class="omos_container">
-          <h5>Velkommen til VIF Valby Idrætsforening!</h5>
-          <p>VIF &ndash; er en gymnastikforening med ca. 750 børnegymnaster og 150 voksen gymnaster. Foreningen holder til i Valby &ndash; Vigerslev Alle Skole, Hanssted Skole og Prøvehallen.</p>
-          <p>Vi er en relativt ung forening, der blev startet af en gruppe forældre i 1999. Året før startede DGI-Storkøbenhavns ”Storby-projekt”, der blev iværksat fordi undersøgelser viste, at storbyens børn var de mindst aktive børn i landet. Projektet havde det mål for øje, at få flere børn til gymnastik, og det er med den baggrund VIF startede, og i den ånd vi gerne vil fortsætte mange år fremover.</p>
-          <p>VIF&rsquo;s målsætningForeningens oprindelige formål er under inspirerende former at give bydelens borgere mulighed for motion, leg og bevægelse i et givende samvær med andre hvor afsæt er fra den fælles opvisningsgymnastik. </p>
-          <p>Foreningen håber at Valby Idrætsforening &ndash; Gymnastik &ndash; bliver samlingspunkt for børn og voksne. Der skal motioneres, men hygge og samvær skal der også være tid og plads til.</p>
-          <p>Som årene er gået er ovenstående formål rent faktisk opnået &ndash; vi giver mulighed for sjov motion til børn og voksne, og vi synes instruktørerne gør et inspirerende stykke arbejde. Derfor vil de kommende år byde på udvikling og dynamik, og vi skal hver især arbejde for fællesskab og foreningsånd, ansvar for sig selv og hinanden og for at gøre foreningen endnu bedre for Valbys borgere.</p>
-          <div class="omos_links">
-            <a href="./bestyrelsen">Bestyrelse</a>
-            <a href="./traenere">Trænere</a>
-          </div>
-        </article>
-
-        <div class="under_billede">
-          <img src="./imgs/gymnaster.webp" alt="">
+  <main>
+    <h1>Om os</h1>
+    <section>
+      <article class="omos_container">
+        <h5>Velkommen til VIF Valby Idrætsforening!</h5>
+        <p>
+          VIF &ndash; er en gymnastikforening med ca. 750 børnegymnaster og 150
+          voksen gymnaster. Foreningen holder til i Valby &ndash; Vigerslev Alle
+          Skole, Hanssted Skole og Prøvehallen.
+        </p>
+        <p>
+          Vi er en relativt ung forening, der blev startet af en gruppe forældre
+          i 1999. Året før startede DGI-Storkøbenhavns ”Storby-projekt”, der
+          blev iværksat fordi undersøgelser viste, at storbyens børn var de
+          mindst aktive børn i landet. Projektet havde det mål for øje, at få
+          flere børn til gymnastik, og det er med den baggrund VIF startede, og
+          i den ånd vi gerne vil fortsætte mange år fremover.
+        </p>
+        <p>
+          VIF&rsquo;s målsætningForeningens oprindelige formål er under
+          inspirerende former at give bydelens borgere mulighed for motion, leg
+          og bevægelse i et givende samvær med andre hvor afsæt er fra den
+          fælles opvisningsgymnastik.
+        </p>
+        <p>
+          Foreningen håber at Valby Idrætsforening &ndash; Gymnastik &ndash;
+          bliver samlingspunkt for børn og voksne. Der skal motioneres, men
+          hygge og samvær skal der også være tid og plads til.
+        </p>
+        <p>
+          Som årene er gået er ovenstående formål rent faktisk opnået &ndash; vi
+          giver mulighed for sjov motion til børn og voksne, og vi synes
+          instruktørerne gør et inspirerende stykke arbejde. Derfor vil de
+          kommende år byde på udvikling og dynamik, og vi skal hver især arbejde
+          for fællesskab og foreningsånd, ansvar for sig selv og hinanden og for
+          at gøre foreningen endnu bedre for Valbys borgere.
+        </p>
+        <div class="omos_links">
+          <a href="/bestyrelsen">Bestyrelse</a>
+          <a href="/traenere">Trænere</a>
         </div>
-      </section>
+      </article>
 
-    </main>
-
+      <div class="under_billede">
+        <img src="/imgs/gymnaster.webp" alt="" />
+      </div>
+    </section>
+  </main>
+ 
 </MainLayout>
 
 <style>
-
-  section{
+  section {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-
-  .under_billede img{
-max-width: 100%;
-width: 600px;
-
+  .under_billede img {
+    max-width: 100%;
+    width: 600px;
   }
-  .omos_container{
+  .omos_container {
     justify-self: center;
     align-self: center;
     text-align: left;
@@ -54,41 +77,63 @@ width: 600px;
     border-radius: 10px;
   }
 
-  h1{
+  h1 {
     padding-top: 160px;
     margin-bottom: 30px;
     text-align: center;
   }
 
-  h5{
+  h5 {
     padding: 10px 30px 10px 30px;
   }
 
   p {
-  padding: 10px 30px 10px 30px;
-  line-height: 1.5;
-  font-family: "Almarai_reg", sans-serif;
-  font-size: 18px;
-  color: #0e1d52;
+    padding: 10px 30px 10px 30px;
+    line-height: 1.5;
+    font-family: "Almarai_reg", sans-serif;
+    font-size: 18px;
+    color: #0e1d52;
   }
 
-  .omos_links{
+  .omos_links {
     margin-top: 40px;
     display: flex;
     justify-content: space-evenly;
   }
 
-  a{
+  a {
     cursor: pointer;
     font-family: "PoetsenOne", sans-serif;
-  font-size: 28px;
-  color: #395d94;
-  font-weight: 400;
+    font-size: 28px;
+    color: #395d94;
+    font-weight: 400;
   }
 
-  a:hover{
-    color: orange;
-    
+  a:hover {
+    color: #fd7d20;
   }
 
+  @media only screen and (max-width: 900px) {
+    section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .omos_container {
+      text-align: left;
+      width: 84%;
+      background: #f4f5f4;
+      padding: 20px 10px;
+      border-radius: 10px;
+    }
+
+    .under_billede img {
+      max-width: 80%;
+      margin: 10px;
+      height: auto;
+    }
+  }
 </style>
